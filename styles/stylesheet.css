@@ -82,8 +82,9 @@ header {
     display: block;
     position: absolute;
     background-color: white;
-    top: 0px;
-    left: 30px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
 }
 
 #menu-checkbox:checked~.nav a {
@@ -96,6 +97,7 @@ label.burger-btn {
     position: absolute;
     top: 0px;
     right: 0dvw;
+    z-index: 1000;
 }
 
 section.main-cta {
