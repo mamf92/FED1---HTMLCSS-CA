@@ -12,9 +12,9 @@
     font-style: normal;
 }
 
-* {
+/* * {
     outline: 1px solid red !important;
-}
+} */
 
 /* html and body */
 html,
@@ -57,9 +57,14 @@ h3 {
     color: white;
 }
 
+.small-padding {
+    padding: 0.5em;
+}
+
 p {
     font-family: 'DM Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
+    padding: 0.5em;
 }
 
 .white-p {
@@ -149,6 +154,16 @@ header {
     z-index: 1000;
 }
 
+.breadcrumbs {
+    display: inline;
+    position: relative;
+}
+
+.breadcrumbs__item {
+    display: inline;
+    padding: 1em 1em;
+}
+
 .current-page {
     text-decoration: underline;
 }
@@ -193,10 +208,21 @@ section.main-content__jackets__header {
     width: 20%;
 }
 
-/* About */
+/* About us*/
 .main-content__about__header {
     background-image: url(../assets/images/backgrounds/Image-by-wirestock-on-Freepik-1.jpg);
     background-size: auto 100vh;
     min-height: 50vh;
     background-position: center;
+}
+
+/* Contact us*/
+form {
+    padding-left: 0.5em;
+}
+
+input,
+form label,
+form button {
+    display: block;
 }

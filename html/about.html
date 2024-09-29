@@ -27,29 +27,31 @@
     <header>
         <a href="../index.html"> <img src="../assets/images/logo/RainyDays_Logo-DarkGreen.png"
                 alt="RainyDays logo, go to homepage" class="logo"> </a>
-        <nav>
-            <ul class="desktop-nav">
-                <li><a href="notavailableyet.html">Shop women's</a></li>
-                <li><a href="mensjackets.html">Shop men's</a></li>
-                <li><a href="about.html" class="current-page">About us</a></li>
-                <li><a href="contact.html">Contact us</a></li>
-            </ul>
-            <ul class="utility-nav">
-                <li><a href="#"><img src="#" alt="Search"></a></li>
-                <li><a href="#"><img src="#" alt="Profile"></a></li>
-                <li><a href="#"><img src="#" alt="Cart"></a></li>
-                <li><a href="#"><img src="#" alt="Menu"></a></li>
-            </ul>
-            <ul class="breadcrumbs">
-                <li><a href="../index.html">Home</a></li>
-                <li>></li>
-                <li><a href="#" class="current-page">About us</a></li>
-            </ul>
+        <input type="checkbox" id="menu-checkbox">
+        <label for="menu-checkbox" class="burger-btn"><img src="../assets/buttons/burger-btn.png"></label>
+        <nav class="nav">
+            <a href="../html/notavailableyet.html">Shop women's</a>
+            <a href="../html/mensjackets.html">Shop men's</a>
+            <a href="../html/about.html" class="current-page">About us</a>
+            <a href="../html/contact.html">Contact us</a>
+        </nav>
+        <nav class="utility-nav">
+            <a href="../html/notavailableyet.html"><img src="../assets/buttons/search.png" class="utility-nav__icon"
+                    alt="Search" /></a>
+            <a href="../html/notavailableyet.html"><img src="../assets/buttons/profile.png" class="utility-nav__icon"
+                    alt="Profile" /></a>
+            <a href="../html/cart.html"><img src="../assets/buttons/cart.png" class="utility-nav__icon"
+                    alt="Cart" /></a>
+        </nav>
+        <nav class="breadcrumbs">
+            <a href="../index.html" class="breadcrumbs__item">Home</a>
+            <p class="breadcrumbs__item">></p>
+            <a href="#" class="breadcrumbs__item current-page">About</a>
         </nav>
     </header>
     <main class="main-content__about" id="main-content">
         <section class="main-content__about__header">
-            <h1 class="white-h1">About us</h1>
+            <h1 class="white-h1 small-padding">About us</h1>
         </section>
         <section>
             <p>At RainyDays, our mission is to equip passionate explorers with raincoats that stand up to any weather
