@@ -12,120 +12,16 @@
     font-style: normal;
 }
 
-/* Headers and modifiers */
-h1,
-h2,
-h3 {
-    font-family: 'DM Serif Display', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: black;
+* {
+    outline: 1px solid red !important;
 }
 
-.white-h1 {
-    color: white;
-}
-
-p {
-    font-family: 'DM Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: black;
-}
-
-.alt-p {
-    font-family: 'DM Serif Display', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: white;
-}
-
-/* Links and modifiers */
-
-a {
-    font-family: 'DM Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-}
-
-header a {
-    font-family: 'DM Serif Display', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: black;
-    text-decoration: none;
-}
-
-
-a .cta-btn {
-    color: white;
-}
-
-
-/* Navigation and header */
-ul {
-    list-style-type: none;
-}
-
-header {
-    position: relative;
-    display: inline-block;
-    padding: 1em;
-
-}
-
-.nav,
-#menu-checkbox {
-    display: none;
-}
-
-.utility-nav {
-    display: inline-block;
-}
-
-.utility-nav a {
-    padding: 1em;
-}
-
-#menu-checkbox:checked~.nav {
-    display: block;
-    position: absolute;
-    background-color: white;
-    width: 100vw;
-    height: 100vh;
-    z-index: 999;
-}
-
-#menu-checkbox:checked~.nav a {
-    display: block;
-    padding: 2rem;
-
-}
-
-label.burger-btn {
-    position: absolute;
-    top: 0px;
-    right: 0dvw;
-    z-index: 1000;
-}
-
-section.main-cta {
-    min-height: 100rem;
-    background-image: url(../assets/images/backgrounds/Image-by-wirestock-on-Freepik.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.cta-btn {
-    display: inline-block;
-    background-color: #94B6D2;
-    padding: 1rem;
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    margin: 1rem;
-    box-shadow: 0 0.25rem 0.25rem 0 black;
-
-}
-
-.current-page {
-    text-decoration: underline;
-}
-
-.logo {
-    max-width: 300px;
-    float: left;
+/* html and body */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Accessibility */
@@ -147,4 +43,160 @@ section.main-cta {
     background-color: #000;
     color: #fff;
     z-index: 100;
+}
+
+/* Headers and modifiers */
+h1,
+h2,
+h3 {
+    font-family: 'DM Serif Display', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+}
+
+.white-h1 {
+    color: white;
+}
+
+p {
+    font-family: 'DM Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+}
+
+.white-p {
+    color: white;
+}
+
+.notavailable {
+    display: inline-block;
+}
+
+/* Links and modifiers */
+
+a {
+    font-family: 'DM Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+header a {
+    font-family: 'DM Serif Display', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
+
+a .cta-btn {
+    color: white;
+}
+
+.utility-nav a {
+    padding: 1em;
+}
+
+/* Header and Navigation */
+ul {
+    list-style-type: none;
+}
+
+header {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1em 1em;
+    margin-bottom: 1em;
+}
+
+.logo {
+    position: relative;
+    width: 30%;
+
+}
+
+.nav,
+#menu-checkbox {
+    display: none;
+}
+
+.utility-nav {
+    display: inline-block;
+    width: 80%;
+}
+
+.utility-nav__icon {
+    width: 3.375em;
+    height: 3.375em;
+}
+
+#menu-checkbox:checked~.nav {
+    display: block;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 200vh;
+    z-index: 999;
+    padding: 0px;
+}
+
+#menu-checkbox:checked~.nav a {
+    display: block;
+    padding: 2rem;
+
+}
+
+.burger-btn {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    z-index: 1000;
+}
+
+.current-page {
+    text-decoration: underline;
+}
+
+/* Front page CTA */
+section.main-cta {
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-image: url(../assets/images/backgrounds/Image-by-wirestock-on-Freepik.jpg);
+    background-size: auto 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: #94B6D2;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: 1rem;
+    box-shadow: 0 0.25rem 0.25rem 0 black;
+
+}
+
+/* Jackets */
+section.main-content__jackets__header {
+    background-image: url(../assets/images/people/man-with-orange-jacket-image-by-freepik.jpg);
+    background-size: 100vw auto;
+
+}
+
+.jackets__selection {
+    margin-top: 1em;
+}
+
+.jackets__selection__product__image {
+    position: relative;
+    width: 20%;
+}
+
+/* About */
+.main-content__about__header {
+    background-image: url(../assets/images/backgrounds/Image-by-wirestock-on-Freepik-1.jpg);
+    background-size: auto 100vh;
+    min-height: 50vh;
+    background-position: center;
 }
