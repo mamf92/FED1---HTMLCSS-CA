@@ -1,3 +1,19 @@
+@import url("reset.css");
+@import url("variables.css");
+
+body {
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 /* Fonts */
 .dm-serif-display-regular {
     font-family: "DM Serif Display", serif;
@@ -146,6 +162,11 @@ header {
     order: 3;
 }
 
+.burger-btn__image {
+    width: 3.3em;
+    height: 3.3em;
+}
+
 .nav,
 #menu-checkbox {
     display: none;
@@ -214,7 +235,7 @@ section.main-cta {
 /* Components, buttons etc */
 .main-cta-btn {
     display: inline-block;
-    background-color: #94B6D2;
+    background-color: #1F3C54;
     padding: 1rem;
     color: white;
     text-decoration: none;
@@ -226,9 +247,8 @@ section.main-cta {
 }
 
 .green-btn {
-    background-color: #9CA344;
+    background-color: #4A5912;
 }
-
 
 /* Product category page: Jackets */
 section.main-content__jackets__header {
