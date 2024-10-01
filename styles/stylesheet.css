@@ -195,11 +195,6 @@ header {
     padding-inline-start: 0.5em;
 }
 
-.breadcrumbs__link {
-
-    padding: 0.5em;
-}
-
 .current-page {
     text-decoration: underline;
 }
