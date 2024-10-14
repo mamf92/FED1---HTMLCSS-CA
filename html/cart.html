@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="RainyDays jackets are all waterproof to the highest rating while still being breathable. They are the perfect sportswear for exploreres and people who loves the outdoors. ">
+        content="This is your RainyDays shopping cart. If you have added some items to your cart, they will show up here. If not you can continue shopping by following the links.">
     <meta name="keyword"
-        content="rainydays, outdoor, sports, jackets, outdoorwear, clothes, outdoorclothes, coats, waterproof">
+        content="rainydays, shopping, cart, outdoor, sports, jackets, outdoorwear, clothes, outdoorclothes, coats, waterproof">
     <meta name="author" content="Martin Fischer">
     <title>RainyDays - Pushing the Comfort Zone</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,30 +23,59 @@
 </head>
 
 <body>
-    <header>
-        <a href="../index.html"> <img src="../assets/images/logo/RainyDays_Logo-DarkGreen_small.png"
-                alt="RainyDays logo, go to homepage"> </a>
-        <nav>
-            <ul class="utility-nav">
-                <li><a href="#"><img src="#" alt="Cart"></a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h1>Your cart</h1>
-        </section>
-        <section>
-            <h2>Special offer</h2>
-            <p>Only today: Get 20% off on your order! The discount is automatically added when you go to checkout.
-            </p>
-            <a href="checkoutflow1.html">Checkout</a>
-            <a href="#">Continue shopping</a>
-        </section>
 
-    </main>
-    <footer>
-    </footer>
-</body>
+    <body>
+        <a href="#main-content" class="skip2main">Skip to main content</a>
+        <header>
+            <a href="../index.html"> <img src="../assets/images/logo/RainyDays_Logo-DarkGreen_small.png"
+                    alt="RainyDays logo, go to homepage" class="logo"> </a>
+            <input type="checkbox" id="menu-checkbox">
+            <label for="menu-checkbox" class="burger-btn"><img src="../assets/buttons/burger-btn_default.png"
+                    class="burger-btn__image"></label>
+            <nav class="nav">
+                <a href="../html/notavailableyet.html">Shop women's</a>
+                <a href="../html/mensjackets.html">Shop men's</a>
+                <a href="../html/about.html">About us</a>
+                <a href="../html/contact.html">Contact us</a>
+            </nav>
+            <nav class="utility-nav">
+                <div class="utility-nav__item">
+                    <a href="../html/notavailableyet.html"><img src="../assets/buttons/search_default.png"
+                            class="utility-nav__icon" alt="Search" /></a>
+                </div>
+                <div class="utility-nav__item">
+                    <a href="../html/notavailableyet.html"><img src="../assets/buttons/profile_default.png"
+                            class="utility-nav__icon" alt="Profile" /></a>
+                </div>
+                <div class="utility-nav__item">
+                    <a href="../html/cart.html"><img src="../assets/buttons/cart_default.png" class="utility-nav__icon"
+                            alt="Cart" /></a>
+                </div>
+            </nav>
+        </header>
+        <main class="cart" id="main-content">
+            <section class="cart__cart-content">
+                <h1 class="cart__cart-content__heading">Your cart</h1>
+                <p class="cart__cart-content__text">Your cart is empty.
+                </p>
+
+            </section>
+            <section class="cart__special-offer">
+                <h2 class="cart__special-offer__heading">Special offer</h2>
+                <p class="cart__special-offer__text">Only today: Get 20% off on your order! The discount is
+                    automatically
+                    added when you go to
+                    checkout.
+                </p>
+            </section>
+            <section class="cart__cta">
+                <a href="checkoutflow1.html" class="main-cta-btn green-btn main-cta-btn--alt-margin">Checkout</a>
+                <a href="../index.html" class="main-cta-btn green-btn main-cta-btn--alt-margin">Continue shopping</a>
+            </section>
+
+        </main>
+        <footer>
+        </footer>
+    </body>
 
 </html>

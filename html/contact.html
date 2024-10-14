@@ -39,12 +39,18 @@
             <a href="../html/contact.html" class="current-page">Contact us</a>
         </nav>
         <nav class="utility-nav">
-            <a href="../html/notavailableyet.html"><img src="../assets/buttons/search_default.png"
-                    class="utility-nav__icon" alt="Search" /></a>
-            <a href="../html/notavailableyet.html"><img src="../assets/buttons/profile_default.png"
-                    class="utility-nav__icon" alt="Profile" /></a>
-            <a href="../html/cart.html"><img src="../assets/buttons/cart_default.png" class="utility-nav__icon"
-                    alt="Cart" /></a>
+            <div class="utility-nav__item">
+                <a href="../html/notavailableyet.html"><img src="../assets/buttons/search_default.png"
+                        class="utility-nav__icon" alt="Search" /></a>
+            </div>
+            <div class="utility-nav__item">
+                <a href="../html/notavailableyet.html"><img src="../assets/buttons/profile_default.png"
+                        class="utility-nav__icon" alt="Profile" /></a>
+            </div>
+            <div class="utility-nav__item">
+                <a href="../html/cart.html"><img src="../assets/buttons/cart_default.png" class="utility-nav__icon"
+                        alt="Cart" /></a>
+            </div>
         </nav>
     </header>
     <nav class="breadcrumbs">
@@ -52,14 +58,14 @@
         <p class="breadcrumbs__item">></p>
         <a href="#" class="breadcrumbs__item current-page">Contact us</a>
     </nav>
-    <main id="main-content">
-        <section>
-            <h1 class="small-padding">Get in touch</h1>
-            <p class="">Do you have questions regarding your order, any product, or just some feedback?
+    <main class="contact-us" id="main-content">
+        <section class="contact-us__header">
+            <h1 class="contact-us__heading">Get in touch</h1>
+            <p class="contact-us__text">Do you have questions regarding your order, any product, or just some feedback?
                 We’ll answer within the
                 next business day. </p>
         </section>
-        <section>
+        <section class="contact-us__form">
             <form>
                 <label for="name-input">Name</label>
                 <input type="text" name="name" id="name-input">

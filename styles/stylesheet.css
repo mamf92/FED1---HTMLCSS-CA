@@ -1,45 +1,18 @@
 @import url("reset.css");
 @import url("variables.css");
 
-
-.centered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-/* Fonts */
-.dm-serif-display-regular {
-    font-family: "DM Serif Display", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.dm-sans-light {
-    font-family: "DM Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-}
-
 /* * {
     outline: 1px solid red !important;
 } */
 
-/* html, body, main, footer */
-html,
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
+
+/* Global styling */
+/* Fonts */
+
+/* html, body, main, footer */
 body {
     display: grid;
-    min-height: 100vh;
-    max-width: 100vw;
     grid-template-rows: auto auto auto 1fr auto;
     grid-template-areas:
         'skip2main'
@@ -47,12 +20,10 @@ body {
         'breadcrumbs'
         'main'
         'footer';
-    margin: 0;
 }
 
 main {
     grid-area: main;
-
 }
 
 footer {
@@ -87,8 +58,7 @@ footer {
 h1,
 h2,
 h3 {
-    font-family: 'DM Serif Display', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: black;
+    font-family: var(--font-heading);
     margin: 0;
 }
 
@@ -97,18 +67,16 @@ h3 {
 }
 
 .small-padding {
-    padding: 0.2em;
+    padding: var(--padding-small);
 }
 
 .medium-padding {
-    padding: 1em;
+    padding: var(--padding-medium);
 }
 
 p {
-    font-family: 'DM Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: black;
+    font-family: var(--font-body);
     margin: 0;
-    padding: 0.2em;
 }
 
 .white-p {
@@ -119,9 +87,6 @@ p {
     width: 50%
 }
 
-.notavailable {
-    display: inline-block;
-}
 
 /* Links and modifiers */
 
@@ -142,11 +107,6 @@ a .cta-btn {
     text-align: center;
 }
 
-.utility-nav a {
-    width: 54px;
-    height: 54px;
-}
-
 /* Header and Navigation */
 header {
     position: relative;
@@ -154,10 +114,9 @@ header {
     align-items: center;
     max-width: 100vw;
     justify-content: space-between;
-    box-sizing: border-box;
     min-height: 10vh;
     padding: 0.5em 0.5em;
-    gap: 1em;
+    gap: 2vw;
     grid-area: header;
 }
 
@@ -177,14 +136,21 @@ header {
 }
 
 .utility-nav__item {
-    margin: 1vw;
-    justify-content: space-around;
+    display: flex;
+}
+
+.utility-nav__item a {
+    min-width: 2em;
+    min-height: 2em;
+    max-width: 2.75em;
+    max-height: 2.75em;
+
 }
 
 .utility-nav__icon {
-    width: 10vw;
     min-width: 2em;
     max-width: 2.75em;
+    padding: var(--padding-small);
 }
 
 .burger-btn {
@@ -196,6 +162,7 @@ header {
 .burger-btn__image {
     width: 100%;
     max-width: 2.75em;
+    min-width: 2em;
 }
 
 /* .burger-btn__image {
@@ -214,7 +181,7 @@ header {
     align-items: center;
     justify-content: space-around;
     position: absolute;
-    top: 101px;
+    top: 10vh;
     right: 0px;
     width: 100%;
     background-color: white;
@@ -225,18 +192,6 @@ header {
 #menu-checkbox:checked~.nav a {
     display: block;
     padding: 2rem;
-
-}
-
-@media (min-width: 800px) {
-    .nav {
-        display: block;
-    }
-
-    .nav__link {
-        display: inline-block;
-        padding: 0.5em;
-    }
 }
 
 .breadcrumbs {
@@ -257,6 +212,31 @@ header {
     text-decoration: underline;
 }
 
+/* Components, buttons etc */
+.main-cta-btn {
+    display: grid;
+    max-height: 3em;
+    max-width: 20em;
+    min-width: 7em;
+    background-color: var(--color-darkblue);
+    padding: 1em;
+    margin: 1em 2em 5em 1em;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 7px;
+    box-shadow: 0 0.2rem 0.2rem 0 black;
+    border: none;
+}
+
+.green-btn {
+    background-color: var(--color-darkgreen);
+}
+
+.main-cta-btn--alt-margin {
+    margin: 1em 2em;
+}
+
 /* Front page CTA */
 .main-cta {
     display: flex;
@@ -272,41 +252,32 @@ header {
     background-repeat: no-repeat;
 }
 
-/* Components, buttons etc */
-.main-cta-btn {
-    display: grid;
-    max-height: 3em;
-    min-width: 7em;
-    background-color: #1F3C54;
-    padding: 1em;
-    margin: 1em 2em 5em 1em;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 7px;
-    box-shadow: 0 0.2rem 0.2rem 0 black;
-    border: none;
 
-}
 
-.green-btn {
-    background-color: #4A5912;
-}
-
+/* Pages */
 /* Product category page: Jackets */
 section.main-content__jackets__header {
-    background-image: url(../assets/images/people/man-with-orange-jacket-image-by-freepik.jpg);
+    min-height: 40vh;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0) 50%), url(../assets/images/people/man-with-orange-jacket-image-by-freepik.jpg);
     background-size: 100vw auto;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: 60% 10%;
 }
 
 .jackets__selection {
     margin-top: 1em;
 }
 
+.jackets__selection>* {
+    display: flex;
+    gap: 1em;
+    padding: var(--padding-small)
+}
+
 .jackets__selection__product__image {
-    position: relative;
-    width: 20%;
+    width: 100%;
+
 }
 
 /* Product page */
@@ -315,7 +286,6 @@ section.main-content__jackets__header {
     position: relative;
     right: 0px;
     width: 40%;
-
 }
 
 .product-page__product {
@@ -332,6 +302,7 @@ section.main-content__jackets__header {
     background-size: auto 100vh;
     min-height: 50vh;
     background-position: center;
+
 }
 
 /* Contact us*/
@@ -344,3 +315,58 @@ form label,
 form button {
     display: block;
 }
+
+/* Shopping cart */
+.cart {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    margin: var(--margin-medium);
+}
+
+.cart>* {
+    flex: 1;
+}
+
+.cart__special-offer {
+    align-self: flex-end;
+}
+
+.cart__cta {
+    align-content: center;
+}
+
+
+/* Not available yet */
+.notavailable {
+    display: inline-block;
+}
+
+.notavailable__h1 {
+    text-align: center;
+    font-size: var(--heading-h1-medium);
+    margin: var(--margin-small);
+    padding: 0;
+}
+
+.notavailable__p {
+    margin: var(--margin-medium);
+}
+
+/* Media queries */
+@media (min-width: 600px) {}
+
+
+
+@media (min-width: 800px) {
+    .nav {
+        display: block;
+    }
+
+    .nav__link {
+        display: inline-block;
+        padding: 0.5em;
+    }
+}
+
+@media (min-width: 1200px) {}
