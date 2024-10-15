@@ -161,10 +161,9 @@ header {
 }
 
 .utility-nav__item a {
-    min-width: 2em;
-    min-height: 2em;
-    max-width: 2.75em;
-    max-height: 2.75em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -175,8 +174,7 @@ header {
 }
 
 .burger-btn {
-    position: relative;
-    display: inline-block;
+    display: flex;
     order: 3;
 }
 
@@ -236,7 +234,6 @@ header {
 /* Components, buttons etc */
 .main-cta-btn {
     display: grid;
-    max-height: 3em;
     max-width: 20em;
     min-width: 7em;
     background-color: var(--color-darkblue);
@@ -246,7 +243,7 @@ header {
     text-align: center;
     text-decoration: none;
     border-radius: 7px;
-    box-shadow: 0 0.2rem 0.2rem 0 black;
+    box-shadow: 0.2em 0.4em 0.5em gray;
     border: none;
 }
 
@@ -421,7 +418,7 @@ textarea {
 }
 
 .cart__special-offer {
-    align-self: flex-end;
+    align-self: center;
 }
 
 .cart__special-offer__heading {
@@ -429,7 +426,7 @@ textarea {
 }
 
 .cart__cta {
-    align-content: center;
+    align-self: center;
 }
 
 /* Checkout flow */
@@ -438,17 +435,19 @@ textarea {
     grid-template-columns: repeat(3, auto);
     gap: 5em;
     max-height: 10vh;
-    justify-content: center;
+    justify-items: center;
 }
 
 .checkout__nav a {
     display: flex;
+    max-height: 10vh;
     justify-content: center;
     align-items: center;
 }
 
 .checkout__nav__icon {
     max-width: 100%;
+    max-width: 2.75em;
 }
 
 .checkout__nav__item1 {
@@ -466,9 +465,56 @@ textarea {
 .checkout-cta {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: auto 6em repeat(2, 1fr) 3em auto 3em repeat(2, 1fr);
+    justify-content: center;
+    justify-items: center;
+    margin: var(--margin-medium);
+    grid-auto-rows: 2em;
 }
 
+.checkout-cta h1 {
+    grid-row: 1;
+}
+
+.checkout-cta__guest {
+    grid-row: 3;
+}
+
+.checkout-cta__login {
+    grid-row: 4;
+}
+
+.checkout-cta p {
+    text-align: center;
+    margin: var(--margin-large);
+    grid-row: 6;
+}
+
+.checkout-cta h2 {
+    text-align: center;
+    grid-row: 7;
+}
+
+.checkout-cta__easy-checkout {
+    max-height: 3em;
+    max-width: 20em;
+    min-width: 7em;
+    margin: var(--margin-medium);
+    border-radius: 10px;
+    box-shadow: 0.2em 0.8em 0.5em gray;
+}
+
+.easy-checkout__apple {
+    grid-row: 8;
+}
+
+.easy-checkout__google {
+    grid-row: 9;
+}
+
+.checkout-cta__easy-checkout img {
+    max-width: 100%;
+}
 
 /* Not available yet */
 .notavailable {
