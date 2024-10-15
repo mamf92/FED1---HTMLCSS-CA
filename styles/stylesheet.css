@@ -407,7 +407,6 @@ textarea {
 }
 
 
-
 /* Shopping cart */
 .cart {
     display: flex;
@@ -431,6 +430,43 @@ textarea {
 
 .cart__cta {
     align-content: center;
+}
+
+/* Checkout flow */
+.checkout__nav {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 5em;
+    max-height: 10vh;
+    justify-content: center;
+}
+
+.checkout__nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout__nav__icon {
+    max-width: 100%;
+}
+
+.checkout__nav__item1 {
+    grid-column: 1;
+}
+
+.checkout__nav__item2 {
+    grid-column: 2;
+}
+
+.checkout__nav__item3 {
+    grid-column: 3;
+}
+
+.checkout-cta {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
 }
 
 
