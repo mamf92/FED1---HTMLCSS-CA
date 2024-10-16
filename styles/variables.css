@@ -8,8 +8,12 @@
     --color-darkblue: #1F3C54;
 
     /* Font families */
-    --font-heading: 'DM Serif Display', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    --font-body: 'DM Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --font-heading: 'Lato', 'Arial Narrow Bold', sans-serif;
+    --font-body: 'DM Sans', 'Gill Sans', sans-serif;
+
+    /* Font weights */
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
 
     /* Text sizing */
     --heading-large: 3em;
@@ -20,11 +24,17 @@
     --body-small: 0.5em;
 
     /* Spacing */
-    --padding-small: 0.2em;
+    --padding-xsmall: 0.2em;
+    --padding-small: 0.5em;
     --padding-medium: 1em;
     --padding-large: 2em;
 
-    --margin-small: 0.2em;
+    --margin-small: 0.5em;
     --margin-medium: 1em;
     --margin-large: 2em;
+
+
+    /* Section deviders */
+    --devider-color: black;
+    --devider-spacing: 2em;
 }
