@@ -13,7 +13,7 @@
 /* html, body, main, footer */
 body {
     display: grid;
-    grid-template-rows: auto auto 3vh 1fr auto;
+    grid-template-rows: auto auto auto 1fr auto;
     grid-template-areas:
         'skip2main'
         'header'
@@ -70,7 +70,8 @@ input {
 }
 
 a {
-    font-family: var(--font-body)
+    font-family: var(--font-body);
+    text-decoration: none;
 }
 
 .white {
@@ -261,7 +262,8 @@ header a {
 .breadcrumbs {
     display: flex;
     align-items: center;
-    max-height: 2vh;
+    max-height: 3vh;
+    padding: var(--padding-xsmall);
     grid-area: breadcrumbs;
 }
 
@@ -280,10 +282,12 @@ header a {
 
 
 /* Front page CTA */
+
 .main-cta {
-    display: flex;
-    flex-direction: row-reverse;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: end;
+    justify-items: center;
     min-height: 80vh;
     min-width: 100vw;
     margin: 0;
@@ -321,17 +325,20 @@ header a {
     width: 100%;
 }
 
+
 /* Product page: Bergen */
 .product-page {
     display: grid;
-    height: 80vh;
 }
 
 .product-page__product {
     margin: var(--margin-medium);
     display: grid;
+    min-height: 70vh;
     grid-template-rows: repeat(7, auto);
     grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
+    row-gap: 1em;
     grid-auto-rows: auto;
     grid-auto-columns: auto;
 }
@@ -342,37 +349,70 @@ header a {
     grid-row: 1;
 }
 
-.product-page__product__p {
-    grid-column: 1 / span 2;
-    grid-row: 3;
-}
 
 .product-page__product__image {
     grid-column: 1 / span 2;
     grid-row: 2;
-    width: 50%;
+    width: 60%;
     justify-self: center;
+}
+
+
+.product-page__product__color-selector {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-content: center;
+    gap: 1vw;
+    grid-column: 1 / span 2;
+    grid-row: 3;
+}
+
+.product-page__product__color-selector a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.product-page__product__color {
+    width: 60%;
+
+}
+
+.product-page__product__size-selector {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1vw;
+    align-content: center;
+    text-align: center;
+    font: var(--font-body);
+    font-weight: bold;
+    grid-column: 1 / span 2;
+    grid-row: 4;
+}
+
+.product-page__product__size-selector>* {
+    padding: var(--padding-xsmall);
+    border: 2px solid var(--color-darkgreen);
+    border-radius: 5px;
+    color: var(--color-black);
+
+}
+
+.product-page__product__p {
+    grid-column: 1 / span 2;
+    grid-row: 5;
 }
 
 .product-page__product__price {
     grid-column: 2;
-    grid-row: 4;
+    grid-row: 6;
     justify-self: end;
-}
-
-.product-page__product__color-selector {
-    grid-column: 1;
-    grid-row: 5;
-}
-
-.product-page__product__size-selector {
-    grid-column: 2;
-    grid-row: 5;
 }
 
 .product-page__product__cta {
     grid-column: 1 /span 2;
-    grid-row: 6;
+    grid-row: 7;
     align-self: center;
     justify-self: center;
 
@@ -711,7 +751,11 @@ textarea {
     grid-row: 3;
 }
 
+
+
 /* Media queries */
+
+
 
 /* Problems with burger menu in landscape on phones! */
 /* @media (orientation: landscape){
@@ -736,19 +780,121 @@ textarea {
     .jackets__selection>* {
         gap: 1.5em;
     }
+
+    /* Main page */
+    .main-cta {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cta-btn__men {
+        grid-column: 2;
+    }
+
+    .cta-btn__women {
+        grid-column: 3;
+    }
+
+    /* Product page: Bergen */
+    .product-page__product__color-selector {
+        gap: 3vw;
+    }
+
+    .product-page__product__color {
+        width: 50%;
+
+    }
 }
 
 
 @media (min-width: 600px) {
+
+    /* Main page */
     .main-cta {
         background-image: url(../assets/images/backgrounds/image-by-wirestock-on-freepik-medium.jpg);
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .cta-btn__men {
+        grid-column: 3;
+    }
+
+    .cta-btn__women {
+        grid-column: 4;
     }
 
     .jackets__selection>* {
         gap: 2em;
     }
-}
 
+    /* Product page: Bergen */
+    .product-page__product__h1 {
+        grid-column: 2;
+        grid-row: 1;
+        padding: 0;
+        align-self: end;
+    }
+
+    .product-page__product__p {
+        grid-column: 2;
+        grid-row: 2;
+        margin: 0;
+    }
+
+    .product-page__product__image {
+        grid-column: 1;
+        grid-row: 2 / span 6;
+        width: 100%;
+    }
+
+    .product-page__product__price {
+        grid-column: 2;
+        grid-row: 5;
+        justify-self: end;
+    }
+
+    .product-page__product__color-selector {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-content: center;
+        gap: 1vw;
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .product-page__product__color {
+        width: 60%;
+
+    }
+
+    .product-page__product__size-selector {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1vw;
+        align-content: center;
+        text-align: center;
+        font: var(--font-body);
+        font-weight: bold;
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    .product-page__product__size-selector>* {
+        padding: var(--padding-xsmall);
+        border: 2px solid var(--color-darkgreen);
+        border-radius: 5px;
+        color: var(--color-black);
+
+    }
+
+    .product-page__product__cta {
+        grid-column: 2;
+        grid-row: 6;
+        align-self: center;
+        justify-self: center;
+
+    }
+
+}
 
 
 @media (min-width: 850px) {
@@ -797,7 +943,7 @@ textarea {
     /* Navigation */
     .breadcrumbs {
         display: grid;
-        grid-template-columns: auto auto auto 850px;
+        grid-template-columns: auto auto auto auto auto 750px;
         grid-template-rows: 2vh;
         align-items: center;
         max-width: 1000px;
@@ -807,6 +953,31 @@ textarea {
     /* Main page */
     .main-cta {
         background-image: url(../assets/images/backgrounds/image-by-wirestock-on-freepik-large.jpg);
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .cta-btn__men {
+        grid-column: 3;
+    }
+
+    .cta-btn__women {
+        grid-column: 4;
+    }
+
+    .jackets__selection>* {
+        gap: 2em;
+    }
+
+
+    /* Product page: Bergen */
+    .product-page {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .product-page__product {
+        margin: 0;
+        column-gap: 3em;
     }
 
     /* Product category page: Jackets */
