@@ -976,8 +976,12 @@ textarea {
     }
 
     .product-page__product {
-        margin: 0;
         column-gap: 3em;
+    }
+
+    .product-page__product__cta {
+        align-self: end;
+        justify-self: end;
     }
 
     /* Product category page: Jackets */
@@ -1007,4 +1011,11 @@ textarea {
         margin: 0;
         grid-column: 2;
     }
+}
+
+@media (min-width: 1200px) {
+    .product-page__product {
+        margin: 0;
+    }
+
 }
