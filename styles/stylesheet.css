@@ -13,7 +13,7 @@
 /* html, body, main, footer */
 body {
     display: grid;
-    grid-template-rows: auto auto auto 1fr auto;
+    grid-template-rows: auto auto 4vh 1fr auto;
     grid-template-areas:
         'skip2main'
         'header'
@@ -259,7 +259,8 @@ header a {
 }
 
 .breadcrumbs {
-    display: inline;
+    display: flex;
+    align-items: center;
     grid-area: breadcrumbs;
 }
 
@@ -673,7 +674,7 @@ textarea {
 
 .section-divider {
     border-bottom: 1px solid var(--devider-color);
-    margin: var(--margin-large)
+    margin: var(--margin-small)
 }
 
 /* Chosen shipping*/
@@ -728,7 +729,12 @@ textarea {
         padding: 0;
     }
 
+    .section-divider {
+        margin: var(--margin-medium);
+    }
 }
+
+
 
 @media (min-width: 600px) {
     .main-cta {
@@ -762,12 +768,59 @@ textarea {
 }
 
 @media (min-width: 1000px) {
+
+    /* Header */
+    header {
+        max-width: 1000px;
+        min-width: 1000px;
+        margin: auto;
+        min-height: 10vh;
+        padding: 0.5em 0.5em;
+        grid-area: header;
+    }
+
     .utility-nav__icon {
         padding: 0;
     }
 
+    /* Navigation */
+    .breadcrumbs {
+        display: grid;
+        grid-template-columns: auto auto auto 850px;
+        align-items: center;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    /* Main page */
     .main-cta {
         background-image: url(../assets/images/backgrounds/image-by-wirestock-on-freepik-large.jpg);
     }
 
+    /* Product category page: Jackets */
+    .jackets__selection>* {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .section-divider {
+        margin: var(--margin-large) auto;
+    }
+
+    .main-content__jackets__header {
+        display: grid;
+        grid-template-columns: auto 1000px auto;
+        grid-template-rows: auto auto 1fr;
+        min-height: 50vh;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0) 50%), url(../assets/images/people/man-with-orange-jacket-image-by-freepik-large.jpg);
+
+    }
+
+    .main-content__jackets__heading,
+    .main-content__jackets__text {
+        padding: var(--padding-small);
+        padding-left: 0;
+        margin: 0;
+        grid-column: 2;
+    }
 }
