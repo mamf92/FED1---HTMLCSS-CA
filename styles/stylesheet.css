@@ -912,17 +912,16 @@ textarea {
     /* Cart */
     .cart {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: auto auto;
         grid-template-rows: auto auto;
         column-gap: 2em;
-        max-width: 1000px;
-        margin: auto;
+        margin: var(--margin-large);
         grid-template-areas:
             'cart-content special-offer'
-            '. cart-cta';
+            'cart-content cart-cta';
     }
 
-    .section-divider {
+    .cart-devider1 {
         display: none;
     }
 
@@ -930,10 +929,10 @@ textarea {
         grid-area: cart-content;
     }
 
-    /* .cart__cart-content__img1,
+    .cart__cart-content__img1,
     .cart__cart-content__img2 {
-        max-width: 30%;
-    } */
+        max-width: 100%;
+    }
 
     .cart__special-offer {
         padding: var(--padding-large);
@@ -949,6 +948,8 @@ textarea {
 
 
 @media (min-width: 850px) {
+
+    /* Header */
     .nav {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -970,6 +971,7 @@ textarea {
         padding: var(--padding-xsmall);
     }
 
+    /* Product category page: Jackets */
     .jackets__selection>* {
         gap: 2em;
     }
@@ -1019,7 +1021,6 @@ textarea {
         gap: 2em;
     }
 
-
     /* Product page: Bergen */
     .product-page {
         max-width: 1000px;
@@ -1042,7 +1043,7 @@ textarea {
         gap: 3em;
     }
 
-    .section-divider {
+    .jackets__selection__devider {
         margin: var(--margin-large) auto;
     }
 
@@ -1062,11 +1063,36 @@ textarea {
         margin: 0;
         grid-column: 2;
     }
+
+    /* Cart */
+    .cart {
+        max-width: 1000px;
+        margin: var(--margin-large);
+    }
+
+    .cart__special-offer__heading {
+        font-size: var(--heading-medium);
+    }
 }
 
+
 @media (min-width: 1200px) {
+
+    /* Product page */
     .product-page__product {
         margin: 0;
     }
+
+    /* Cart */
+    .cart {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .cart__special-offer__heading {
+        font-size: var(--heading-medium);
+    }
+
+
 
 }
