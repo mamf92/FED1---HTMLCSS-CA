@@ -13,7 +13,7 @@
 /* html, body, main, footer */
 body {
     display: grid;
-    grid-template-rows: auto auto 4vh 1fr auto;
+    grid-template-rows: auto auto 3vh 1fr auto;
     grid-template-areas:
         'skip2main'
         'header'
@@ -261,6 +261,7 @@ header a {
 .breadcrumbs {
     display: flex;
     align-items: center;
+    max-height: 2vh;
     grid-area: breadcrumbs;
 }
 
@@ -314,7 +315,6 @@ header a {
 .jackets__selection>* {
     display: flex;
     gap: 1em;
-    padding: var(--padding-xsmall)
 }
 
 .jackets__selection__product__image {
@@ -732,13 +732,20 @@ textarea {
     .section-divider {
         margin: var(--margin-medium);
     }
-}
 
+    .jackets__selection>* {
+        gap: 1.5em;
+    }
+}
 
 
 @media (min-width: 600px) {
     .main-cta {
         background-image: url(../assets/images/backgrounds/image-by-wirestock-on-freepik-medium.jpg);
+    }
+
+    .jackets__selection>* {
+        gap: 2em;
     }
 }
 
@@ -765,6 +772,10 @@ textarea {
     .utility-nav__icon {
         padding: var(--padding-xsmall);
     }
+
+    .jackets__selection>* {
+        gap: 2em;
+    }
 }
 
 @media (min-width: 1000px) {
@@ -787,6 +798,7 @@ textarea {
     .breadcrumbs {
         display: grid;
         grid-template-columns: auto auto auto 850px;
+        grid-template-rows: 2vh;
         align-items: center;
         max-width: 1000px;
         margin: auto;
@@ -801,6 +813,7 @@ textarea {
     .jackets__selection>* {
         max-width: 1000px;
         margin: auto;
+        gap: 3em;
     }
 
     .section-divider {
