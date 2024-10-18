@@ -437,9 +437,10 @@ header a {
 }
 
 .about__header {
-    background-image: url(../assets/images/backgrounds/Image-by-wirestock-on-Freepik-1.jpg);
+    background-image: url(../assets/images/backgrounds/image-by-wirestock-on-freepik-couple-walking.jpg);
     background-size: auto 100vh;
     min-height: 50vh;
+    background-size: cover;
     background-position: center;
 
 }
@@ -1008,6 +1009,22 @@ textarea {
         text-align: center;
         font-size: var(--heading-medium);
     }
+
+    /* About page */
+    .about__header {
+        background-image: url(../assets/images/backgrounds/image-by-wirestock-on-freepik-couple-walking-large.jpg);
+    }
+
+    .about__text {
+        column-count: 2;
+        column-gap: 2em;
+    }
+
+    .about__text p {
+        margin: 0;
+        margin-bottom: 1em;
+    }
+
 }
 
 
@@ -1063,6 +1080,7 @@ textarea {
         grid-template-columns: auto auto auto auto auto 750px;
         grid-template-rows: 2vh;
         align-items: center;
+        min-width: 1000px;
         max-width: 1000px;
         margin: auto;
     }
@@ -1149,6 +1167,14 @@ textarea {
     .confirmation__order__cta__btn {
         margin: 1em auto;
     }
+
+    /* About page */
+    .about__header__heading,
+    .about__text {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
 }
 
 @media (min-width: 1200px) {
