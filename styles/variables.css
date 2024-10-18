@@ -16,22 +16,24 @@
     --font-weight-bold: 700;
 
     /* Text sizing */
-    --heading-large: 3em;
+    --heading-xlarge: 3em;
+    --heading-large: 2.5em;
     --heading-medium: 2em;
-    --heading-small: 1em;
+    --heading-small: 1.5em;
+    --heading-xsmall: 1em;
     --body-large: 2em;
     --body-medium: 1em;
     --body-small: 0.5em;
 
     /* Spacing */
-    --padding-xsmall: 0.2em;
-    --padding-small: 0.5em;
-    --padding-medium: 1em;
     --padding-large: 2em;
+    --padding-medium: 1em;
+    --padding-small: 0.5em;
+    --padding-xsmall: 0.2em;
 
-    --margin-small: 0.5em;
-    --margin-medium: 1em;
     --margin-large: 2em;
+    --margin-medium: 1em;
+    --margin-small: 0.5em;
 
 
     /* Section deviders */
