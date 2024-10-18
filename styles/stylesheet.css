@@ -198,12 +198,13 @@ header a {
 .header__logo-container {
     display: flex;
     justify-content: center;
+    min-width: 20px;
 }
 
 .logo {
     display: flex;
     max-height: 8vh;
-    min-width: 130px;
+    min-width: 100%;
     order: 1;
     padding: var(--padding-xsmall)
 }
@@ -245,6 +246,7 @@ header a {
     width: 100%;
     max-width: 2.75em;
     min-width: 2em;
+    padding: var(--padding-xsmall);
 }
 
 .nav,
@@ -274,6 +276,7 @@ header a {
 .breadcrumbs {
     display: flex;
     align-items: center;
+    max-width: 100vw;
     max-height: 3vh;
     padding: var(--padding-xsmall);
     grid-area: breadcrumbs;
@@ -456,8 +459,15 @@ header a {
 
 .contact-us__header {
     display: grid;
+    grid-template-rows: auto 1fr;
     grid-column: 1 /span 2;
     grid-row: 1;
+    background-image: url(../assets/images/backgrounds/image-by-standret-on-freepik-forest-sunset-medium.jpg);
+    background-size: auto 100vh;
+    min-height: 50vh;
+    background-size: cover;
+    background-position: center;
+
 }
 
 .contact-us__form {
@@ -804,10 +814,6 @@ textarea {
 } */
 
 @media (min-width: 425px) {
-    .utility-nav__icon {
-        padding: 0;
-    }
-
     .jackets__selection>* {
         gap: 1.5em;
     }
@@ -838,6 +844,11 @@ textarea {
 
 
 @media (min-width: 600px) {
+
+    .utility-nav__icon,
+    .burger-btn__image {
+        padding: 0;
+    }
 
     .section-divider {
         margin: var(--margin-medium);
