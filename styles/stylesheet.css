@@ -296,7 +296,7 @@ header a {
 }
 
 
-/* Front page CTA */
+/* Home page / main page/ main cta */
 
 .main-cta {
     display: grid;
@@ -307,7 +307,7 @@ header a {
     min-width: 100vw;
     margin: 0;
     padding: 0;
-    background-image: url(../assets/images/backgrounds/Image-by-wirestock-on-Freepik.jpg);
+    background-image: url(../assets/images/backgrounds/image-by-wirestock-on-freepik.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -862,7 +862,7 @@ textarea {
 
     /* Main page */
     .main-cta {
-        background-image: url(../assets/images/backgrounds/image-by-wirestock-on-freepik-medium.jpg);
+        background-image: url(../assets/images/backgrounds/image-by-wirestock-on-freepik-medium.webp);
         grid-template-columns: repeat(4, 1fr);
     }
 
@@ -1183,7 +1183,7 @@ textarea {
 
     /* Main page */
     .main-cta {
-        background-image: url(../assets/images/backgrounds/image-by-wirestock-on-freepik-large.jpg);
+        background-image: url(../assets/images/backgrounds/image-by-wirestock-on-freepik-large.webp);
         grid-template-columns: repeat(5, 1fr);
     }
 
