@@ -156,7 +156,6 @@ a {
     text-decoration: none;
     border-radius: 7px;
     box-shadow: 0.2em 0.4em 0.5em black;
-    border: none;
 }
 
 .cta-btn--main {
@@ -204,7 +203,7 @@ header a {
 .logo {
     display: flex;
     max-height: 8vh;
-    min-width: 100%;
+    min-width: 120px;
     order: 1;
     padding: var(--padding-xsmall)
 }
@@ -231,7 +230,7 @@ header a {
 
 .utility-nav__icon {
     min-width: 2em;
-    max-width: 2.75em;
+    max-width: 2.65em;
     padding: var(--padding-xsmall);
 }
 
@@ -297,7 +296,6 @@ header a {
 
 
 /* Home page / main page/ main cta */
-
 .main-cta {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -313,11 +311,8 @@ header a {
     background-repeat: no-repeat;
 }
 
-
-
 /* Pages */
 /* Product category page: Jackets */
-
 .main-content__jackets__header {
     min-height: 40vh;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0) 50%), url(../assets/images/people/man-with-orange-jacket-image-by-freepik.jpg);
@@ -334,6 +329,10 @@ header a {
 .jackets__selection>* {
     display: flex;
     gap: 1em;
+}
+
+.product-trondheim {
+    margin-top: var(--margin-xsmall)
 }
 
 .jackets__selection__product__image {
@@ -874,8 +873,13 @@ textarea {
         grid-column: 4;
     }
 
+    /* Product category page: Jackets */
     .jackets__selection>* {
         gap: 2em;
+    }
+
+    .product-trondheim {
+        margin-top: var(--margin-small)
     }
 
     /* Product page: Bergen */
@@ -1242,6 +1246,10 @@ textarea {
         grid-column: 2;
     }
 
+    .product-trondheim {
+        margin-top: var(--margin-medium)
+    }
+
     /* Cart */
     .cart {
         max-width: 1000px;
@@ -1319,5 +1327,11 @@ textarea {
 
     .contact-us__form {
         padding: 0;
+    }
+
+    /* Not available yet page */
+    .notavailable__h1 {
+        max-width: 800px;
+        margin: auto;
     }
 }
