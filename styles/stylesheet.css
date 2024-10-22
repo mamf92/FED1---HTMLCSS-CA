@@ -5,8 +5,6 @@
     outline: 1px solid red !important;
 } */
 
-
-
 /* Global styling */
 /* Fonts */
 
@@ -82,66 +80,6 @@ a {
     text-decoration: none;
 }
 
-.white {
-    color: white;
-}
-
-.large-h {
-    font-size: var(--heading-large);
-}
-
-.medium-h {
-    font-size: var(--heading-medium);
-}
-
-.small-h {
-    font-size: var(--heading-small);
-}
-
-.xsmall-h {
-    font-size: var(--heading-xsmall)
-}
-
-.large-p {
-    font-size: var(--body-large);
-}
-
-.medium-p {
-    font-size: var(--body-medium);
-}
-
-.small-p {
-    font-size: var(--body-small);
-}
-
-/* Margins, paddings and sizing */
-.xsmall-padding {
-    padding: var(--padding-xsmall);
-}
-
-.small-padding {
-    padding: var(--padding-small);
-}
-
-.medium-padding {
-    padding: var(--padding-medium);
-}
-
-.narrow {
-    width: 50%
-}
-
-.small-margin {
-    margin: var(--margin-small)
-}
-
-.medium-margin {
-    margin: var(--margin-medium)
-}
-
-.large-margin {
-    margin: var(--margin-large)
-}
 
 /* Components, buttons etc */
 .cta-btn {
@@ -163,18 +101,17 @@ a {
     margin: 1em 1.5em 5em 1em;
 }
 
-.green-btn {
+.cta-btn--green {
     background-color: var(--color-darkgreen);
 }
 
-.large-btn {
+.cta-btn--large {
     min-width: 15em;
 }
 
 .main-cta-btn--alt-margin {
     margin: 1em 2em;
 }
-
 
 /* Header and Navigation */
 header {
@@ -322,6 +259,17 @@ header a {
     background-position: 60% 10%;
 }
 
+.main-content__jackets__heading {
+    color: var(--color-white);
+    padding-left: var(--padding-small);
+}
+
+.main-content__jackets__text {
+    color: var(--color-white);
+    margin: var(--margin-medium);
+    width: 40%;
+}
+
 .jackets__selection {
     margin: var(--margin-medium);
 }
@@ -359,6 +307,7 @@ header a {
 
 
 .product-page__product__h1 {
+    padding: var(--padding-xsmall);
     grid-column: 1;
     grid-row: 1;
 }
@@ -432,19 +381,28 @@ header a {
 
 }
 
-/* About us*/
+/* About page*/
 .about {
     display: flex;
     flex-direction: column;
 }
 
 .about__header {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0) 50%), url(../assets/images/backgrounds/image-by-wirestock-on-freepik-couple-walking.jpg);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0) 50%), url(../assets/images/backgrounds/image-by-wirestock-on-freepik-couple-walking.jpg);
     background-size: auto 100vh;
     min-height: 50vh;
     background-size: cover;
     background-position: center;
 
+}
+
+.about__header__heading {
+    color: var(--color-white);
+    padding: var(--padding-small);
+}
+
+.about__text {
+    padding: var(--padding-medium);
 }
 
 /* Contact us*/
@@ -464,8 +422,8 @@ header a {
     background-size: auto 100vh;
     min-height: 50vh;
     background-size: cover;
-    background-position: center;
-    padding: var(--padding-small)
+    background-position: 0% 30%;
+    padding: var(--padding-small);
 }
 
 .contact-us__text {
@@ -487,6 +445,7 @@ input {
 
 .contact-us__form__submit {
     justify-self: center;
+    font-size: var(--body-medium);
 }
 
 textarea {
@@ -1033,7 +992,7 @@ textarea {
 
     /* About page */
     .about__header {
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 40%), url(../assets/images/backgrounds/image-by-wirestock-on-freepik-couple-walking-large.jpg);
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 30%), url(../assets/images/backgrounds/image-by-wirestock-on-freepik-couple-walking-large.jpg);
     }
 
     .about__text {
