@@ -439,7 +439,7 @@ header a {
 }
 
 .about__header {
-    background-image: url(../assets/images/backgrounds/image-by-wirestock-on-freepik-couple-walking.jpg);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0) 50%), url(../assets/images/backgrounds/image-by-wirestock-on-freepik-couple-walking.jpg);
     background-size: auto 100vh;
     min-height: 50vh;
     background-size: cover;
@@ -1033,7 +1033,7 @@ textarea {
 
     /* About page */
     .about__header {
-        background-image: url(../assets/images/backgrounds/image-by-wirestock-on-freepik-couple-walking-large.jpg);
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 40%), url(../assets/images/backgrounds/image-by-wirestock-on-freepik-couple-walking-large.jpg);
     }
 
     .about__text {
