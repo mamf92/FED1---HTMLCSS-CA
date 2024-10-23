@@ -22,7 +22,6 @@ main {
     grid-area: main;
 }
 
-
 /* Accessibility */
 .sr-only {
     position: absolute;
@@ -334,9 +333,9 @@ footer {
 .main__cta {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(2, auto) 0.5fr auto;
+    grid-template-rows: repeat(2, auto) 1fr auto;
     justify-content: center;
-    min-height: 80vh;
+    min-height: 85vh;
     min-width: 100vw;
     margin: 0;
     padding: var(--padding-small);
@@ -354,6 +353,13 @@ footer {
     grid-column: 1 / span 4;
 }
 
+.main__cta__text {
+    padding-top: var(--padding-medium);
+    text-align: center;
+    grid-row: 2;
+    grid-column: 1 / span 4;
+}
+
 .cta-btn__women {
     grid-column: 3;
     grid-row: 4;
@@ -368,8 +374,9 @@ footer {
 .main__our-users {
     display: flex;
     flex-direction: column;
+    gap: 3em;
     margin-top: var(--margin-medium);
-    min-height: 80vh;
+    min-height: 85vh;
     background-image: url(../assets/images/backgrounds/image-by-freepik-man-hiking.webp);
     background-repeat: no-repeat;
     background-size: cover;
@@ -384,12 +391,22 @@ footer {
     color: var(--color-darkblue);
 }
 
+.main__our-users__text {
+    align-self: end;
+    width: 60%;
+    color: var(--color-white);
+    background-color: var(--color-darkblue-transparent);
+    margin: var(--margin-large);
+    padding: var(--padding-medium);
+    border-radius: 7px;
+}
+
 /* Product presentation */
 .main__product-presentation {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(5, auto);
-    min-height: 80vh;
+    min-height: 85vh;
     grid-template-areas:
         'product-presentation-heading product-presentation-heading product-presentation-heading'
         'product-presentation-bergen . .'
@@ -414,6 +431,7 @@ footer {
 }
 
 .product-presentation__image {
+    border-radius: 50%;
     max-width: 50%;
 }
 

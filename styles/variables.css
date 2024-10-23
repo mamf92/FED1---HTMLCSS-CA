@@ -7,6 +7,7 @@
     --color-green: #9CA344;
     --color-blue: #6C8DA9;
     --color-darkblue: #1F3C54;
+    --color-darkblue-transparent: #1F3C54DD;
 
     /* Font families */
     --font-heading: 'Lato', 'Arial Narrow Bold', sans-serif;
