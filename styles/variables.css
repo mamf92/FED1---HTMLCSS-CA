@@ -2,6 +2,7 @@
     /* Colors */
     --color-black: #000000;
     --color-white: #FFFFFF;
+    --color-grey: #757575;
     --color-darkgreen: #4A5912;
     --color-green: #9CA344;
     --color-blue: #6C8DA9;
@@ -23,7 +24,8 @@
     --heading-xsmall: 1em;
     --body-large: 2em;
     --body-medium: 1em;
-    --body-small: 0.5em;
+    --body-small: 0.8em;
+    --body-xsmall: 0.5em;
 
     /* Spacing */
     --padding-large: 2em;
