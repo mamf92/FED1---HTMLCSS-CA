@@ -366,17 +366,30 @@ footer {
 
 /* Our users */
 .main__our-users {
-    min-height: 40vh;
-    background-image: url(../assets/images/people/man-with-orange-jacket-image-by-freepik.jpg);
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--margin-medium);
+    min-height: 80vh;
+    background-image: url(../assets/images/backgrounds/image-by-freepik-man-hiking.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 20% 20%;
 }
 
+.main__our-users__heading {
+    padding-right: var(--padding-small);
+    align-self: end;
+    width: 60%;
+    text-align: right;
+    color: var(--color-darkblue);
+}
 
 /* Product presentation */
 .main__product-presentation {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(5, auto);
-    min-height: 40vh;
+    min-height: 80vh;
     grid-template-areas:
         'product-presentation-heading product-presentation-heading product-presentation-heading'
         'product-presentation-bergen . .'
