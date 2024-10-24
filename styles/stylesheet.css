@@ -1123,24 +1123,27 @@ textarea {
 
     /* Footer */
     footer {
-        grid-template-columns: repeat(3, auto);
-        grid-template-rows: repeat(2, auto);
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: repeat(4, auto);
         align-items: center;
         grid-template-areas:
-            'logo contact-info-heading some-heading'
-            'logo contact-info some'
-            'copyright . . ';
+            'logo . some-heading'
+            'logo . some'
+            'logo . contact-info-heading '
+            'copyright . contact-info';
+        margin-top: var(--margin-large);
         padding: var(--padding-medium);
+        gap: 0.5em;
+    }
+
+    .footer__some {
+        justify-content: center;
+        gap: 3em;
     }
 
     .footer__contact-info {
         justify-content: left;
-        gap: 3em;
-    }
-
-    .footer__some {
-        justify-content: left;
-        gap: 3em;
+        gap: 2em;
     }
 
     .footer__logo,
@@ -1150,11 +1153,11 @@ textarea {
     }
 
     .fa-brands {
-        font-size: 2.65em;
+        font-size: 2.3em;
     }
 
     .fa-solid {
-        font-size: 2.55em;
+        font-size: 1.5em;
     }
 
     /* Main page */
@@ -1181,6 +1184,9 @@ textarea {
         display: grid;
         grid-template-columns: repeat(4, auto);
         grid-template-rows: repeat(8, auto);
+        max-width: 1000px;
+        margin: auto;
+        column-gap: 2em;
         grid-template-areas:
             'presentation-heading presentation-heading presentation-heading'
             'presentation-heading-bergen presentation-heading-bergen presentation-heading-bergen'
@@ -1189,6 +1195,16 @@ textarea {
             'presentation-image-trondheim presentation-info-trondheim presentation-info-trondheim'
             'presentation-heading-tromso presentation-heading-tromso presentation-heading-tromso'
             'presentation-image-tromso presentation-info-tromso presentation-info-tromso';
+        border-bottom: 1px solid var(--color-darkblue);
+    }
+
+    .presentation__info {
+        border: none;
+    }
+
+    .presentation__heading--trondheim,
+    .presentation__heading--tromso {
+        border-top: 1px solid var(--color-darkblue);
     }
 
 
