@@ -370,72 +370,185 @@ footer {
     grid-row: 4;
 }
 
+/* Product presentation */
+.presentation {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(10, auto);
+    grid-template-areas:
+        'presentation-heading'
+        'presentation-heading-bergen'
+        'presentation-image-bergen'
+        'presentation-info-bergen'
+        'presentation-heading-trondheim'
+        'presentation-image-trondheim'
+        'presentation-info-trondheim'
+        'presentation-heading-tromso'
+        'presentation-image-tromso'
+        'presentation-info-tromso';
+    margin: var(--margin-medium);
+    min-height: 85vh;
+    color: var(--color-darkblue);
+}
+
+.presentation h2 {
+    font-size: var(--heading-small);
+    color: var(--color-darkgreen);
+    margin-top: var(--margin-small);
+    margin-bottom: var(--margin-small);
+}
+
+.presentation__heading {
+    grid-area: presentation-heading;
+    margin: var(--margin-medium) 0;
+}
+
+.presentation__info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(4, auto);
+    align-items: center;
+    row-gap: 0.5em;
+    column-gap: 1em;
+    padding-bottom: var(--padding-medium);
+    margin-bottom: var(--margin-medium);
+    border-top: 1px solid var(--color-darkblue);
+    border-bottom: 1px solid var(--color-darkblue);
+    color: var(--color-black);
+}
+
+.presentation__heading--bergen {
+    grid-area: presentation-heading-bergen;
+    border-top: 1px solid var(--color-darkblue);
+}
+
+.presentation__image--bergen {
+    grid-area: presentation-image-bergen;
+}
+
+.presentation__heading--bergen {
+    grid-area: presentation-heading-bergen;
+}
+
+.presentation__info--bergen {
+    grid-area: presentation-info-bergen;
+}
+
+.presentation__heading--trondheim {
+    grid-area: presentation-heading-trondheim;
+}
+
+.presentation__image--trondheim {
+    grid-area: presentation-image-trondheim;
+}
+
+.presentation__heading--trondheim {
+    grid-area: presentation-heading-trondheim;
+}
+
+.presentation__info--trondheim {
+    grid-area: presentation-info-trondheim;
+}
+
+.presentation__heading--tromso {
+    grid-area: presentation-heading-tromso;
+}
+
+.presentation__image--tromso {
+    grid-area: presentation-image-tromso;
+}
+
+.presentation__heading--tromso {
+    grid-area: presentation-heading-tromso;
+}
+
+.presentation__info--tromso {
+    grid-area: presentation-info-tromso;
+}
+
+.info__text {
+    grid-column: 1 /span 2;
+}
+
+
+.info__icon--drop {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: center;
+
+}
+
+.info__value--waterproof {
+    grid-column: 2;
+    grid-row: 2
+}
+
+.info__icon--temp {
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: center;
+}
+
+.info__value--temp {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.info__icon--weight {
+    grid-column: 1;
+    grid-row: 4;
+    justify-self: center;
+}
+
+.info__value--weight {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.presentation__image {
+    border-radius: 7px;
+    max-width: 100%;
+}
+
+
+
 /* Our users */
 .main__our-users {
     display: flex;
     flex-direction: column;
-    gap: 3em;
+    gap: 1em;
     margin-top: var(--margin-medium);
     min-height: 85vh;
     background-image: url(../assets/images/backgrounds/image-by-freepik-man-hiking.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 20% 20%;
+    background-position: 60% 0%;
 }
 
 .main__our-users__heading {
     padding-right: var(--padding-small);
     align-self: end;
-    width: 60%;
+    width: 80%;
     text-align: right;
     color: var(--color-darkblue);
 }
 
 .main__our-users__text {
+    padding: var(--padding-small) var(--padding-medium);
+    color: var(--color-darkblue);
+    background-color: var(--color-white-transparent);
+
+}
+
+.main__our-users__review {
     align-self: end;
-    width: 60%;
+    width: 80%;
     color: var(--color-white);
     background-color: var(--color-darkblue-transparent);
-    margin: var(--margin-large);
+    margin: var(--margin-medium);
     padding: var(--padding-medium);
     border-radius: 7px;
 }
-
-/* Product presentation */
-.main__product-presentation {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(5, auto);
-    min-height: 85vh;
-    grid-template-areas:
-        'product-presentation-heading product-presentation-heading product-presentation-heading'
-        'product-presentation-bergen . .'
-        'product-presentation-trondheim . .'
-        'product-presentation-tromso . .';
-}
-
-.main__product-presentation__heading {
-    grid-area: product-presentation-heading;
-}
-
-.main__product-presentation__bergen {
-    grid-area: product-presentation-bergen;
-}
-
-.main__product-presentation__trondheim {
-    grid-area: product-presentation-trondheim;
-}
-
-.main__product-presentation__tromso {
-    grid-area: product-presentation-tromso;
-}
-
-.product-presentation__image {
-    border-radius: 50%;
-    max-width: 50%;
-}
-
-
 
 /* Product category page: Jackets */
 .main-content__jackets__header {
@@ -1062,6 +1175,22 @@ textarea {
     .cta-btn__women {
         grid-column: 4;
     }
+
+    /* Product presentation */
+    .presentation {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: repeat(8, auto);
+        grid-template-areas:
+            'presentation-heading presentation-heading presentation-heading'
+            'presentation-heading-bergen presentation-heading-bergen presentation-heading-bergen'
+            'presentation-image-bergen  presentation-info-bergen presentation-info-bergen'
+            'presentation-heading-trondheim presentation-heading-trondheim presentation-heading-trondheim'
+            'presentation-image-trondheim presentation-info-trondheim presentation-info-trondheim'
+            'presentation-heading-tromso presentation-heading-tromso presentation-heading-tromso'
+            'presentation-image-tromso presentation-info-tromso presentation-info-tromso';
+    }
+
 
     /* Product category page: Jackets */
     .jackets__selection>* {
