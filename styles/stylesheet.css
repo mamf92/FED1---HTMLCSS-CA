@@ -332,12 +332,11 @@ footer {
 .main__cta {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(2, auto) 1fr auto;
+    grid-template-rows: repeat(2, auto) 1fr auto 10vh;
     justify-content: center;
     min-height: 85vh;
     min-width: 100vw;
     margin: 0;
-    padding: var(--padding-small);
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0) 50%), url(../assets/images/backgrounds/image-by-wirestock-on-freepik.webp);
     background-size: cover;
     background-position: center;
@@ -507,46 +506,46 @@ footer {
     grid-row: 4;
 }
 
-
-
-
-
 /* Our users */
-.main__our-users {
+.our-users {
     display: flex;
     flex-direction: column;
     gap: 1em;
     margin-top: var(--margin-medium);
-    min-height: 85vh;
     background-image: url(../assets/images/backgrounds/image-by-freepik-man-hiking.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 60% 0%;
 }
 
-.main__our-users__heading {
-    padding-right: var(--padding-small);
-    align-self: end;
-    width: 80%;
-    text-align: right;
+.our-users__heading {
     color: var(--color-darkblue);
+    padding: var(--padding-xsmall);
 }
 
-.main__our-users__text {
-    padding: var(--padding-small) var(--padding-medium);
+.our-users__text {
+    padding: var(--padding-small) var(--padding-xsmall);
     color: var(--color-darkblue);
     background-color: var(--color-white-transparent);
-
 }
 
-.main__our-users__review {
+.our-users__reviews {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.our-users__review {
     align-self: end;
-    width: 80%;
     color: var(--color-white);
     background-color: var(--color-darkblue-transparent);
     margin: var(--margin-medium);
     padding: var(--padding-medium);
     border-radius: 7px;
+}
+
+.our-users__review--name {
+    margin-top: var(--margin-xsmall);
 }
 
 /* Product category page: Jackets */
@@ -1062,20 +1061,6 @@ textarea {
 
 
 /* Media queries */
-
-
-
-/* Problems with burger menu in landscape on phones! */
-/* @media (orientation: landscape){
-    header {
-        height: 15vh;
-    }
-    #menu-checkbox:checked~.nav {
-        top: 10vh;
-    }
-
-} */
-
 @media (min-width: 425px) {
 
     /* Main page */
@@ -1106,7 +1091,6 @@ textarea {
 
     }
 }
-
 
 @media (min-width: 600px) {
 
@@ -1183,8 +1167,6 @@ textarea {
         display: grid;
         grid-template-columns: repeat(2, auto);
         grid-template-rows: repeat(8, auto);
-        max-width: 1000px;
-        margin: auto;
         column-gap: 2em;
         grid-template-areas:
             'presentation-heading presentation-heading'
@@ -1212,6 +1194,32 @@ textarea {
     .presentation__heading--trondheim,
     .presentation__heading--tromso {
         border-top: 1px solid var(--color-darkblue);
+    }
+
+    /* Our users */
+    .our-users {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, auto);
+        gap: 0;
+        background-size: cover;
+        background-position: 20% 0;
+    }
+
+    .our-users__heading {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+        justify-self: right;
+    }
+
+    .our-users__text {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .our-users__reviews {
+        grid-column: 2;
+        grid-row: 3;
     }
 
 
@@ -1515,9 +1523,6 @@ textarea {
 
     /* Header */
     header {
-        /* max-width: 1000px;
-        min-width: 1000px;
-        margin: auto; */
         min-height: 10vh;
         padding: 0.5em 0.5em;
         grid-area: header;
@@ -1557,6 +1562,11 @@ textarea {
     }
 
     /* Product presentation (min-width: 1000px;) */
+    .presentation {
+        max-width: 1000px;
+        margin: auto;
+    }
+
     .presentation__link {
         display: flex;
         max-width: 15vw;
