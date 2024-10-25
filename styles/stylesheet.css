@@ -6,7 +6,7 @@
 } */
 
 /* Global styling */
-/* html, body, main, footer */
+/* html, body*/
 body {
     display: grid;
     grid-template-rows: auto auto auto 1fr auto;
@@ -16,10 +16,6 @@ body {
         'breadcrumbs'
         'main'
         'footer';
-}
-
-main {
-    grid-area: main;
 }
 
 /* Accessibility */
@@ -114,7 +110,7 @@ a {
 
 /* Main elements */
 
-/* Header and Navigation */
+/* Header */
 header {
     display: grid;
     grid-template-columns: repeat(7, auto) 44px;
@@ -229,6 +225,11 @@ header a {
 
 .current-page {
     text-decoration: underline;
+}
+
+/* Main */
+main {
+    grid-area: main;
 }
 
 /* Footer */
@@ -385,7 +386,6 @@ footer {
         'presentation-image-tromso'
         'presentation-info-tromso';
     margin: var(--margin-medium);
-    min-height: 85vh;
     color: var(--color-darkblue);
 }
 
@@ -398,7 +398,7 @@ footer {
 
 .presentation__heading {
     grid-area: presentation-heading;
-    margin: var(--margin-medium) 0;
+    margin: var(--margin-small) 0;
 }
 
 .presentation__info {
@@ -415,6 +415,11 @@ footer {
     color: var(--color-black);
 }
 
+.presentation__image {
+    border-radius: 7px;
+    max-width: 100%;
+}
+
 .presentation__heading--bergen {
     grid-area: presentation-heading-bergen;
     border-top: 1px solid var(--color-darkblue);
@@ -422,6 +427,7 @@ footer {
 
 .presentation__image--bergen {
     grid-area: presentation-image-bergen;
+    max-height: fit-content;
 }
 
 .presentation__heading--bergen {
@@ -468,12 +474,10 @@ footer {
     grid-column: 1 /span 2;
 }
 
-
 .info__icon--drop {
     grid-column: 1;
     grid-row: 2;
     justify-self: center;
-
 }
 
 .info__value--waterproof {
@@ -503,10 +507,7 @@ footer {
     grid-row: 4;
 }
 
-.presentation__image {
-    border-radius: 7px;
-    max-width: 100%;
-}
+
 
 
 
@@ -1158,7 +1159,7 @@ textarea {
         font-size: 1.5em;
     }
 
-    /* Main page */
+    /* Home page */
     .main-cta {
         background-image: url(../assets/images/backgrounds/image-by-wirestock-on-freepik-medium.webp);
         grid-template-columns: repeat(4, 1fr);
@@ -1177,27 +1178,35 @@ textarea {
         grid-column: 4;
     }
 
-    /* Product presentation */
+    /* Product presentation (min-width: 600px;) */
     .presentation {
         display: grid;
-        grid-template-columns: repeat(4, auto);
+        grid-template-columns: repeat(2, auto);
         grid-template-rows: repeat(8, auto);
         max-width: 1000px;
         margin: auto;
         column-gap: 2em;
         grid-template-areas:
-            'presentation-heading presentation-heading presentation-heading'
-            'presentation-heading-bergen presentation-heading-bergen presentation-heading-bergen'
-            'presentation-image-bergen  presentation-info-bergen presentation-info-bergen'
-            'presentation-heading-trondheim presentation-heading-trondheim presentation-heading-trondheim'
-            'presentation-image-trondheim presentation-info-trondheim presentation-info-trondheim'
-            'presentation-heading-tromso presentation-heading-tromso presentation-heading-tromso'
-            'presentation-image-tromso presentation-info-tromso presentation-info-tromso';
+            'presentation-heading presentation-heading'
+            'presentation-heading-bergen presentation-heading-bergen'
+            'presentation-image-bergen  presentation-info-bergen'
+            'presentation-heading-trondheim presentation-heading-trondheim'
+            'presentation-image-trondheim presentation-info-trondheim'
+            'presentation-heading-tromso presentation-heading-tromso'
+            'presentation-image-tromso presentation-info-tromso';
         border-bottom: 1px solid var(--color-darkblue);
+    }
+
+    .presentation__link {
+        display: flex;
+        max-width: 20vw;
+        margin-bottom: var(--margin-xsmall);
     }
 
     .presentation__info {
         border: none;
+        align-self: center;
+        padding: 0;
     }
 
     .presentation__heading--trondheim,
@@ -1529,7 +1538,7 @@ textarea {
         margin: auto;
     }
 
-    /* Main page */
+    /* Home page */
     .main-cta {
         background-image: url(../assets/images/backgrounds/image-by-wirestock-on-freepik-large.webp);
         grid-template-columns: repeat(5, 1fr);
@@ -1546,6 +1555,13 @@ textarea {
     .jackets__selection>* {
         gap: 2em;
     }
+
+    /* Product presentation (min-width: 1000px;) */
+    .presentation__link {
+        display: flex;
+        max-width: 15vw;
+    }
+
 
     /* Product page: Bergen */
     .product-page {
@@ -1644,6 +1660,12 @@ textarea {
 }
 
 @media (min-width: 1200px) {
+
+    /* Home page */
+    /* Product presentation (min-width: 1200px;) */
+    .presentation {
+        min-width: 1000px;
+    }
 
     /* Product page */
     .product-page__product {
