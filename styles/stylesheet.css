@@ -1572,6 +1572,28 @@ textarea {
         max-width: 15vw;
     }
 
+    /* Our users */
+    .our-users {
+        display: grid;
+        grid-template-columns: auto 400px 600px auto;
+    }
+
+    .our-users__heading {
+        grid-column: 2 / span 2;
+        grid-row: 1;
+        justify-self: right;
+    }
+
+    .our-users__text {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .our-users__reviews {
+        grid-column: 3;
+        grid-row: 3;
+    }
+
 
     /* Product page: Bergen */
     .product-page {
