@@ -62,7 +62,7 @@ h1 {
 }
 
 h2 {
-    font-size: var(--heading-xsmall);
+    font-size: var(--heading-small);
 }
 
 p,
@@ -391,8 +391,8 @@ footer {
     color: var(--color-darkblue);
 }
 
-.presentation h2 {
-    font-size: var(--heading-small);
+.presentation h3 {
+    font-size: var(--heading-xsmall);
     color: var(--color-darkgreen);
     margin-top: var(--margin-small);
     margin-bottom: var(--margin-small);
@@ -536,6 +536,10 @@ footer {
     display: flex;
     flex-direction: column;
     align-content: center;
+}
+
+.our-users__reviews h3 {
+    font-size: var(--heading-xsmall);
 }
 
 .our-users__review {
