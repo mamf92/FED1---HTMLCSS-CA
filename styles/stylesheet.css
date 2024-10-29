@@ -1,9 +1,9 @@
 @import url("reset.css");
 @import url("variables.css");
 
-/* * {
+* {
     outline: 1px solid red !important;
-} */
+}
 
 /* Global styling */
 /* html, body*/
@@ -146,19 +146,23 @@ header a {
 .utility-nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
     justify-content: space-between;
     order: 2;
     grid-column: 7;
+
 }
 
 .utility-nav__item {
     display: flex;
+    max-width: 100%;
     justify-content: center;
     align-items: center;
 }
 
 .utility-nav__item a {
     display: flex;
+    max-width: 100%;
     justify-content: center;
     align-items: center;
 }
@@ -329,7 +333,9 @@ footer {
 /* Main CTA */
 .main {
     display: grid;
-    grid-template-rows: 1fr repeat(2, auto);
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, auto);
+    max-width: 100%;
 }
 
 .main__cta {
