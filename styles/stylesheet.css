@@ -726,17 +726,24 @@ footer {
 }
 
 .about__header {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0) 50%), url(../assets/images/backgrounds/image-by-wirestock-on-freepik-couple-walking.jpg);
-    background-size: auto 100vh;
     min-height: 50vh;
-    background-size: cover;
-    background-position: center;
+    max-height: 70vh;
+    width: 100%;
+    position: relative;
+}
 
+.about__header>video {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 .about__header__heading {
     color: var(--color-white);
     padding: var(--padding-small) 0;
+    position: absolute;
+    inset: 0;
+    z-index: 2;
 }
 
 .about__text {
