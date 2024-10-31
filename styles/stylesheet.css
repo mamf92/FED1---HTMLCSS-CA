@@ -885,7 +885,6 @@ textarea:focus {
     grid-row: 8;
     align-self: end;
     justify-self: end;
-
 }
 
 /* Cart special offer */
@@ -903,13 +902,15 @@ textarea:focus {
     align-self: center;
 }
 
-/* Checkout flow - unfinished*/
+/* Checkout flow*/
 .checkout__nav {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 5em;
+    display: flex;
     max-height: 10vh;
-    justify-items: center;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-area: breadcrumbs;
+    border-top: 1px solid var(--color-black);
+    padding: var(--padding-large) var(--padding-medium) 0 var(--padding-medium);
 }
 
 .checkout__nav a {
@@ -919,9 +920,22 @@ textarea:focus {
     align-items: center;
 }
 
-.checkout__nav__icon {
-    max-width: 100%;
-    max-width: 2.75em;
+.nav__icon--container {
+    display: flex;
+    background-color: var(--color-darkgreen);
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+}
+
+.fa-truck-fast,
+.fa-user,
+.fa-credit-card {
+    color: var(--color-white);
+    font-size: 1.6em;
 }
 
 .checkout__nav__item1 {
@@ -939,11 +953,14 @@ textarea:focus {
 .checkout-cta {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 6em repeat(2, 1fr) 3em auto 3em repeat(2, 1fr);
+    grid-template-rows: repeat(7, auto);
     justify-content: center;
     justify-items: center;
     margin: var(--margin-medium);
     grid-auto-rows: 2em;
+    border-top: 1px solid var(--color-black);
+    border-bottom: 1px solid var(--color-black);
+    padding: var(--padding-medium) 0;
 }
 
 .checkout-cta h1 {
@@ -951,27 +968,28 @@ textarea:focus {
 }
 
 .checkout-cta__guest {
-    grid-row: 3;
+    grid-row: 2;
 }
 
 .checkout-cta__login {
-    grid-row: 4;
+    grid-row: 3;
 }
 
 .checkout-cta p {
     text-align: center;
     margin: var(--margin-large);
-    grid-row: 6;
+    grid-row: 4;
 }
 
 .checkout-cta h2 {
     text-align: center;
-    grid-row: 7;
+    grid-row: 5;
 }
 
 .checkout-cta__easy-checkout {
     max-height: 3em;
     max-width: 20em;
+    min-height: 3.2em;
     min-width: 7em;
     margin: var(--margin-medium);
     border-radius: 10px;
@@ -979,15 +997,20 @@ textarea:focus {
 }
 
 .easy-checkout__apple {
-    grid-row: 8;
+    grid-row: 6;
 }
 
 .easy-checkout__google {
-    grid-row: 9;
+    grid-row: 7;
 }
 
 .checkout-cta__easy-checkout img {
     max-width: 100%;
+}
+
+.checkout__current-step {
+    border: 3px solid var(--color-green);
+    transform: scale(1.2);
 }
 
 /* Confirmation page */
@@ -1272,7 +1295,6 @@ textarea:focus {
         grid-row: 3;
     }
 
-
     /* Product category page: Jackets */
     .jackets__selection>* {
         gap: 2em;
@@ -1393,6 +1415,12 @@ textarea:focus {
         min-width: 20em;
         grid-area: cart-cta;
     }
+
+    /* Checkout flow 600px */
+    .checkout-cta {
+        gap: 1.5em;
+    }
+
 
     /* Confirmation page */
     .confirmation {
@@ -1538,7 +1566,6 @@ textarea:focus {
 
 }
 
-
 @media (min-width: 850px) {
 
     /* Header */
@@ -1656,7 +1683,6 @@ textarea:focus {
         grid-row: 3;
     }
 
-
     /* Product page: Bergen */
     .product-page {
         max-width: 1000px;
@@ -1689,7 +1715,6 @@ textarea:focus {
         grid-template-rows: auto auto 1fr;
         min-height: 50vh;
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0) 50%), url(../assets/images/people/man-with-orange-jacket-image-by-freepik-large.jpg);
-
     }
 
     .main-content__jackets__heading,
@@ -1712,6 +1737,20 @@ textarea:focus {
 
     .cart__special-offer__heading {
         font-size: var(--heading-medium);
+    }
+
+    /* Checkout flow 1000px */
+    .checkout__nav {
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .checkout-cta {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 2em;
     }
 
     /* Confirmation page */
@@ -1770,6 +1809,17 @@ textarea:focus {
 
     .cart__special-offer__heading {
         font-size: var(--heading-medium);
+    }
+
+    /* Checkout flow 1200px */
+    .checkout__nav {
+        justify-content: space-between;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .checkout-cta {
+        padding-bottom: var(--padding-large);
     }
 
     /* Confirmation page */

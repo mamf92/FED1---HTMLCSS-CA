@@ -9,41 +9,75 @@
     <meta name="keyword"
         content="checkout, payment, pay, shopping, cart, rainydays, outdoor, sports, jackets, outdoorwear, clothes, outdoorclothes, coats, waterproof">
     <meta name="author" content="Martin Fischer">
-    <title>RainyDays - Pushing the Comfort Zone</title>
+    <title>RainyDays - Checkout page 1 of 3</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:wght@700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../styles/stylesheet.css">
-
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png">
     <link rel="manifest" href="../assets/images/favicon/site.webmanifest">
+    <script src="https://kit.fontawesome.com/f119ec2cf5.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <a href="#main-content" class="skip2main">Skip to main content</a>
+    <a href="#main-content" class="sr-only skip2main">Skip to main content</a>
     <header>
-        <nav class="checkout__nav">
-            <a href="../html/notavailableyet.html"><img src="../assets/buttons/cart_default.png"
-                    class="checkout__nav__icon" alt="Cart" /></a>
-            <a href="../html/notavailableyet.html"><img src="../assets/buttons/profile_default.png"
-                    class="checkout__nav__icon" alt="Profile" /></a>
-            <a href="../html/cart.html"><img src="../assets/buttons/card_default.png" class="checkout__nav__icon"
-                    alt="Card" /></a>
+        <a href="../index.html" class="header__logo-container"><img
+                src="../assets/images/logo/RainyDays_Logo-DarkGreen_small.png" alt="RainyDays logo, go to homepage"
+                class="logo"></a>
+        <input type="checkbox" id="menu-checkbox">
+        <label for="menu-checkbox" class="burger-btn"><img src="../assets/buttons/burger-btn_default.png"
+                alt="Menu button" class="burger-btn__image"></label>
+        <nav class="nav">
+            <a href="../html/notavailableyet.html">Shop women's</a>
+            <a href="../html/mensjackets.html" class="current-page">Shop men's</a>
+            <a href="../html/about.html">About us</a>
+            <a href="../html/contact.html">Contact us</a>
+        </nav>
+        <nav class="utility-nav">
+            <div class="utility-nav__item">
+                <a href="../html/notavailableyet.html"><img src="../assets/buttons/search_default.png" alt="Search"
+                        class="utility-nav__icon"></a>
+            </div>
+            <div class="utility-nav__item">
+                <a href="../html/notavailableyet.html"><img src="../assets/buttons/profile_default.png" alt="Profile"
+                        class="utility-nav__icon"></a>
+            </div>
+            <div class="utility-nav__item">
+                <a href="../html/cart.html"><img src="../assets/buttons/cart_default.png" alt="Cart"
+                        class="utility-nav__icon"></a>
+            </div>
         </nav>
     </header>
+    <nav class="checkout__nav">
+        <!-- <a href="../html/notavailableyet.html"
+            aria-label="Step 1: Current page. Choose how to add your personal information"
+            class="checkout__current-step"><img src="../assets/buttons/profile_default.png" class="checkout__nav__icon"
+                alt="" /></a> -->
+        <a href="#" class="nav__icon--container checkout__current-step"
+            aria-label="Step 1: Current page. Choose how to add your personal information"><i
+                class="fa-solid fa-user checkout__nav__icon"></i></a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <a href="#" class="nav__icon--container" aria-label="Step 2: Choose shipping"><i
+                class="fa-solid fa-truck-fast checkout__nav__icon"></i></a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <a href="#" class="nav__icon--container" aria-label="Step 3: Choose payment option"><i
+                class="fa-solid fa-credit-card checkout__nav__icon"></i></a>
+        <!-- <a href="../html/cart.html" aria-label="Step 3: Choose payment option"><img
+                    src="../assets/buttons/card_default.png" class="checkout__nav__icon" alt="" /></a> -->
+    </nav>
     <main id="main-content">
+
         <section class="checkout-cta">
             <h1>Choose one:</h1>
-            <a href="checkoutflow2.html"
-                class="checkout-cta__guest main-cta-btn cta-btn--green main-cta-btn--alt-margin">Continue as guest</a>
-            <a href="notavailableyet.html"
-                class="checkout-cta__login main-cta-btn cta-btn--green main-cta-btn--alt-margin">Sign in</a>
+            <a href="checkoutflow2.html" class="checkout-cta__guest cta-btn cta-btn--green">Continue as guest</a>
+            <a href="notavailableyet.html" class="checkout-cta__login cta-btn cta-btn--green">Sign in</a>
             <p>or</p>
-            <h2>Checkout with:</h2>
+            <h2>Quick checkout with:</h2>
             <a href="checkoutflow4.html" class="checkout-cta__easy-checkout easy-checkout__apple"><img
                     src="../assets/buttons/apple-pay_default.png" alt="Place order with Apple Pay"></a>
             <a href="checkoutflow4.html" class="checkout-cta__easy-checkout easy-checkout__google"><img
@@ -51,7 +85,38 @@
         </section>
 
     </main>
-    <footer>
+    <footer class="footer">
+        <div class="footer__some__heading">
+            <h3>Follow us</h3>
+        </div>
+        <div class="footer__some">
+            <a href="https://facebook.com/" aria-label="Go to our Facebook page"><i
+                    class="fa-brands fa-facebook"></i></a>
+            <a href="https://instagram.com/" aria-label="Go to our Instagram page"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com/" aria-label="Go to our TikTok page"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+        <div class="footer__contact-info__heading">
+            <h3>Get in touch</h3>
+        </div>
+        <div class="footer__contact-info">
+            <a href="https://maps.app.goo.gl/whgshzU5GHnZNhxT8" aria-label="Find us on Google Maps"><i
+                    class="fa-solid fa-location-dot"></i>
+            </a>
+            <a href="tel:+47924987654" aria-label="Call ut at +47924987654"><i class="fa-solid fa-phone"></i>
+            </a>
+            <a href="mailto:contact@example.com" aria-label="Email us at contact@example.com"><i
+                    class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+        <div class="footer__logo">
+            <img class="footer__logo__image" src="../assets/images/logo/rainydays_logo_grey.png" alt="RainyDays logo">
+        </div>
+        <div class="footer__copyright">
+            <p>Martin Fischer</p>
+            <p>2024</p>
+            <i class="fa-regular fa-copyright"></i>
+        </div>
     </footer>
 </body>
 
