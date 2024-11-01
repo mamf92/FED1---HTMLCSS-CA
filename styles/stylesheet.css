@@ -1750,7 +1750,6 @@ textarea:focus {
         max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
-        gap: 2em;
     }
 
     /* Confirmation page */
