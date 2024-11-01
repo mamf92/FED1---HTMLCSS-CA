@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="This is the first page of the checkout flow on RainyDays. RainyDays jackets are all waterproof to the highest rating while still being breathable. They are the perfect sportswear for exploreres and people who loves the outdoors. ">
+        content="This is the third page of the checkout flow on RainyDays. Choose the shipping option that best suits you. RainyDays jackets are all waterproof to the highest rating while still being breathable. They are the perfect sportswear for exploreres and people who loves the outdoors. ">
     <meta name="keyword"
         content="checkout, payment, pay, shopping, cart, rainydays, outdoor, sports, jackets, outdoorwear, clothes, outdoorclothes, coats, waterproof">
     <meta name="author" content="Martin Fischer">
-    <title>RainyDays - Checkout page 1 of 3 - Choose how to add your personal information</title>
+    <title>RainyDays - Checkout page 2 of 3 - Choose shipping</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -55,11 +55,12 @@
     </header>
     <nav class="checkout__nav">
 
-        <a href="#" class="nav__icon--container checkout__current-step"
-            aria-label="Step 1: Current page. Choose how to add your personal information"><i
+        <a href="checkoutflow2.html" class="nav__icon--container"
+            aria-label="Go back to step 1: Add personal information"><i
                 class="fa-solid fa-user checkout__nav__icon"></i></a>
         <i class="fa-solid fa-chevron-right"></i>
-        <a href="#" class="nav__icon--container" aria-label="Step 2: Choose shipping"><i
+        <a href="#" class="nav__icon--container checkout__current-step"
+            aria-label="Step 2: Current page. Choose shipping option"><i
                 class="fa-solid fa-truck-fast checkout__nav__icon"></i></a>
         <i class="fa-solid fa-chevron-right"></i>
         <a href="#" class="nav__icon--container" aria-label="Step 3: Choose payment option"><i
@@ -68,17 +69,38 @@
     </nav>
     <main id="main-content">
 
-        <section class="checkout-cta">
+        <section class="choose-shipping">
             <h1>Choose one:</h1>
-            <a href="checkoutflow2.html" class="checkout-cta__guest cta-btn cta-btn--green cta-btn--large">Continue as
-                guest</a>
-            <a href="notavailableyet.html" class="checkout-cta__login cta-btn cta-btn--green cta-btn--large">Sign in</a>
-            <p>or</p>
-            <h2>Quick checkout with:</h2>
-            <a href="checkoutflow3.html" class="checkout-cta__easy-checkout easy-checkout__apple"><img
-                    src="../assets/buttons/apple-pay_default.png" alt="Place order with Apple Pay"></a>
-            <a href="checkoutflow4.html" class="checkout-cta__easy-checkout easy-checkout__google"><img
-                    src="../assets/buttons/google.pay_default.png" alt="Place order with Google Pay"></a>
+            <h2>Economy shipping options:</h2>
+            <label class="choose-shipping--card">
+                <input type="radio" name="choose-shipping" class="choose-shipping--input">
+                <div class="card--content">
+                    <h3>PostSør - Pickup point delivery</h3>
+                    <p>Delivery to nearest pickup point.</p>
+                    <p>Expected delivery: 5 - 7 days</p>
+                    <p>Price: Free delivery. </p>
+                </div>
+            </label>
+            </div>
+            <div class="choose-shipping--card">
+                <h3>Deliveroh! - To door delivery</h3>
+                <p>Delivery to your door.</p>
+                <p>Expected delivery: 5 - 7 days</p>
+                <p>Price: 50,-</p>
+            </div>
+            <h2>Next day delivery options:</h2>
+            <div class="choose-shipping--card">
+                <h3>PostSør - Pickup point delivery</h3>
+                <p>DDelivery to nearest pickup point.</p>
+                <p>Expected delivery: Today or tomorrow.</p>
+                <p>Price: 100,-</p>
+            </div>
+            <div class="choose-shipping--card">
+                <h3>Deliveroh! - To door delivery</h3>
+                <p>Delivery to your door.</p>
+                <p>Expected delivery: Today or tomorrow.</p>
+                <p>Price: 150,-</p>
+            </div>
         </section>
 
     </main>

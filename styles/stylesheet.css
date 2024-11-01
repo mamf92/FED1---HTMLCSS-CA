@@ -902,7 +902,7 @@ textarea:focus {
     align-self: center;
 }
 
-/* Checkout flow*/
+/* Checkout flow */
 .checkout__nav {
     display: flex;
     max-height: 10vh;
@@ -910,7 +910,7 @@ textarea:focus {
     align-items: center;
     grid-area: breadcrumbs;
     border-top: 1px solid var(--color-black);
-    padding: var(--padding-large) var(--padding-medium) 0 var(--padding-medium);
+    padding: var(--padding-medium) var(--padding-medium) 0 var(--padding-medium);
 }
 
 .checkout__nav a {
@@ -922,7 +922,7 @@ textarea:focus {
 
 .nav__icon--container {
     display: flex;
-    background-color: var(--color-darkgreen);
+    background-color: var(--color-grey);
     justify-content: center;
     align-items: center;
     height: auto;
@@ -1009,9 +1009,59 @@ textarea:focus {
 }
 
 .checkout__current-step {
+    background-color: var(--color-darkgreen);
     border: 3px solid var(--color-green);
     transform: scale(1.2);
 }
+
+.checkout__form--heading {
+    border-top: 1px solid var(--color-black);
+    margin-top: var(--margin-small);
+    padding: var(--padding-small);
+    text-align: center;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.checkout__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin: 0 auto var(--margin-medium) auto;
+    padding-bottom: var(--padding-large);
+    border-bottom: 1px solid var(--color-black);
+}
+
+.checkout__form--label {
+    align-self: flex-start;
+}
+
+.checkout__form--info {
+    min-width: 300px;
+}
+
+.choose-shipping {
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+}
+
+.choose-shipping--card {
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.choose-shipping--input:checked+.choose-shipping--card {
+    border: 2px solid var(--color-darkgreen);
+    background-color: #367f12;
+}
+
+/* .choose-shipping--input {
+    display: none;
+} */
 
 /* Confirmation page */
 .confirmation {
@@ -1421,6 +1471,9 @@ textarea:focus {
         gap: 1.5em;
     }
 
+    .checkout__form--info {
+        margin-bottom: var(--margin-medium);
+    }
 
     /* Confirmation page */
     .confirmation {
@@ -1598,9 +1651,6 @@ textarea:focus {
         padding: var(--padding-xsmall);
     }
 
-    /* Footer */
-
-
     /* Product category page: Jackets */
     .jackets__selection>* {
         gap: 2em;
@@ -1609,7 +1659,7 @@ textarea:focus {
 
 @media (min-width: 1000px) {
 
-    /* Header */
+    /* Header 1000px*/
     header {
         min-height: 10vh;
         padding: 0.5em 0.5em;
@@ -1620,7 +1670,7 @@ textarea:focus {
         padding: 0;
     }
 
-    /* Navigation */
+    /* Navigation 1000px*/
     .breadcrumbs {
         display: grid;
         grid-template-columns: auto auto auto auto auto 750px;
@@ -1632,7 +1682,7 @@ textarea:focus {
         margin-bottom: var(--margin-xsmall);
     }
 
-    /* Home page */
+    /* Home page 1000px*/
     .main-cta {
         background-image: url(../assets/images/backgrounds/image-by-wirestock-on-freepik-large.webp);
         grid-template-columns: repeat(5, 1fr);
@@ -1752,6 +1802,14 @@ textarea:focus {
         margin-right: auto;
     }
 
+    .checkout__form--heading {
+        padding: var(--padding-medium);
+    }
+
+    .checkout__form--info {
+        margin-bottom: var(--margin-large);
+    }
+
     /* Confirmation page */
     .confirmation {
         grid-template-columns: auto 60%;
@@ -1812,7 +1870,6 @@ textarea:focus {
 
     /* Checkout flow 1200px */
     .checkout__nav {
-        justify-content: space-between;
         padding-left: 0;
         padding-right: 0;
     }
