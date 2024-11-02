@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="This is the third page of the checkout flow on RainyDays. Choose the shipping option that best suits you. RainyDays jackets are all waterproof to the highest rating while still being breathable. They are the perfect sportswear for exploreres and people who loves the outdoors. ">
+        content="This is the fourth page of the checkout flow on RainyDays. Add your payment information. RainyDays jackets are all waterproof to the highest rating while still being breathable. They are the perfect sportswear for exploreres and people who loves the outdoors. ">
     <meta name="keyword"
         content="checkout, payment, pay, shopping, cart, rainydays, outdoor, sports, jackets, outdoorwear, clothes, outdoorclothes, coats, waterproof">
     <meta name="author" content="Martin Fischer">
-    <title>RainyDays - Checkout page 2 of 3 - Choose shipping</title>
+    <title>RainyDays - Checkout page 3 of 3 - Add payment option</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -55,12 +55,11 @@
     </header>
     <nav class="checkout__nav">
 
-        <a href="checkoutflow2.html" class="nav__icon--container"
-            aria-label="Go back to step 1: Add personal information"><i
+        <a href="#" class="nav__icon--container checkout__current-step"
+            aria-label="Step 1: Current page. Choose how to add your personal information"><i
                 class="fa-solid fa-user checkout__nav__icon"></i></a>
         <i class="fa-solid fa-chevron-right"></i>
-        <a href="#" class="nav__icon--container checkout__current-step"
-            aria-label="Step 2: Current page. Choose shipping option"><i
+        <a href="#" class="nav__icon--container" aria-label="Step 2: Choose shipping"><i
                 class="fa-solid fa-truck-fast checkout__nav__icon"></i></a>
         <i class="fa-solid fa-chevron-right"></i>
         <a href="#" class="nav__icon--container" aria-label="Step 3: Choose payment option"><i
@@ -69,54 +68,19 @@
     </nav>
     <main id="main-content">
 
-        <section class="choose-shipping">
-            <h1 class="choose-shipping--heading">Choose one:</h1>
-            <div class="shipping-form">
-                <h2 class="eco-heading">Economy shipping options:</h2>
-                <div class="card--content eco-drop">
-                    <input type="radio" name="choose-shipping" class="choose-shipping--input" id="economy-shipping-drop"
-                        value="free">
-                    <label class="choose-shipping--card" for="economy-shipping-drop">
-                        <h3 class="shipping--title">PostSør - Pickup point delivery</h3>
-                        <p class="shipping--description">Delivery to nearest pickup point.</p>
-                        <p class="shipping--time">Expected delivery: 5 - 7 days</p>
-                        <p class="shipping--price">Price: Free delivery. </p>
-                    </label>
-                </div>
-                <div class="card--content eco-door">
-                    <input type="radio" name="choose-shipping" class="choose-shipping--input" id="economy-shipping-door"
-                        value="eco-door">
-                    <label class="choose-shipping--card" for="economy-shipping-door">
-                        <h3 class="shipping--title">Deliveroh! - To door delivery</h3>
-                        <p class="shipping--description">Delivery to your door.</p>
-                        <p class="shipping--time">Expected delivery: 5 - 7 days</p>
-                        <p class="shipping--price">Price: 50,-</p>
-                    </label>
-                </div>
-                <h2 class="prem-heading">Next day delivery options:</h2>
-                <div class="card--content prem-drop">
-                    <input type="radio" name="choose-shipping" class="choose-shipping--input" id="premium-shipping-drop"
-                        value="eco-door">
-                    <label class="choose-shipping--card" for="premium-shipping-drop">
-                        <h3 class="shipping--title">PostSør - Pickup point delivery</h3>
-                        <p class="shipping--description">Delivery to nearest pickup point.</p>
-                        <p class="shipping--time">Expected delivery: Today or tomorrow.</p>
-                        <p class="shipping--price">Price: 100,-</p>
-                    </label>
-                </div>
-                <div class="card--content prem-door">
-                    <input type="radio" name="choose-shipping" class="choose-shipping--input" id="premium-shipping-door"
-                        value="free">
-                    <label class="choose-shipping--card" for="premium-shipping-door">
-                        <h3 class="shipping--title">Deliveroh! - To door delivery</h3>
-                        <p class="shipping--description">Delivery to your door.</p>
-                        <p class="shipping--time">Expected delivery: Today or tomorrow.</p>
-                        <p class="shipping--price">Price: 150,-</p>
-                    </label>
-                </div>
-            </div>
-            <a href="checkoutflow4.html" class="cta-btn cta-btn--green cta-btn--large">Continue</a>
+        <section class="checkout-cta">
+            <h1>Choose one:</h1>
+            <a href="checkoutflow2.html" class="checkout-cta__guest cta-btn cta-btn--green cta-btn--large">Continue as
+                guest</a>
+            <a href="notavailableyet.html" class="checkout-cta__login cta-btn cta-btn--green cta-btn--large">Sign in</a>
+            <p>or</p>
+            <h2>Quick checkout with:</h2>
+            <a href="checkoutflow3.html" class="checkout-cta__easy-checkout easy-checkout__apple"><img
+                    src="../assets/buttons/apple-pay_default.png" alt="Place order with Apple Pay"></a>
+            <a href="checkoutflow4.html" class="checkout-cta__easy-checkout easy-checkout__google"><img
+                    src="../assets/buttons/google.pay_default.png" alt="Place order with Google Pay"></a>
         </section>
+
     </main>
     <footer class="footer">
         <div class="footer__some__heading">
