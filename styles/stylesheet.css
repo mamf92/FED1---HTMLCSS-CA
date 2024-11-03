@@ -1655,7 +1655,7 @@ textarea:focus {
 
     /* About page */
     .about__header {
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 30%), url(../assets/images/backgrounds/image-by-wirestock-on-freepik-couple-walking-large.jpg);
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 30%), url(../assets/images/backgrounds/image-by-wirestock-on-freepik-couple-walking-large.webp);
     }
 
     .about__text {
@@ -1678,7 +1678,7 @@ textarea:focus {
     }
 
     .contact-us__header {
-        background-image: url(../assets/images/backgrounds/image-by-standret-on-freepik-forest-sunset-large.jpg);
+        background-image: url(../assets/images/backgrounds/image-by-standret-on-freepik-forest-sunset-large.webp);
     }
 
     .contact-us__text {
@@ -1890,7 +1890,7 @@ textarea:focus {
         grid-template-columns: auto 1000px auto;
         grid-template-rows: auto auto 1fr;
         min-height: 50vh;
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0) 50%), url(../assets/images/people/man-with-orange-jacket-image-by-freepik-large.jpg);
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0) 50%), url(../assets/images/people/man-with-orange-jacket-image-by-freepik-large.webp);
     }
 
     .main-content__jackets__heading,
