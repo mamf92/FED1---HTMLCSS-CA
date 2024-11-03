@@ -735,7 +735,7 @@ footer {
 
 .about__header__heading {
     color: var(--color-white);
-    padding: var(--padding-small) 0;
+    padding: var(--padding-small);
 }
 
 .about__text {
@@ -1966,6 +1966,7 @@ textarea:focus {
     .about__text {
         max-width: 1000px;
         margin: 0 auto;
+        padding: var(--padding-small) 0;
     }
 
     /* Contact us page */
