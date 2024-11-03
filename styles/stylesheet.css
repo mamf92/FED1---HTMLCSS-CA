@@ -83,7 +83,7 @@ a {
     justify-content: center;
     max-width: 20em;
     min-width: 7em;
-    max-height: 3em;
+    max-height: 3.2em;
     padding: var(--padding-medium);
     margin: var(--margin-medium);
     background-color: var(--color-black);
@@ -716,7 +716,6 @@ footer {
     grid-row: 7;
     align-self: center;
     justify-self: center;
-
 }
 
 /* About page*/
@@ -803,7 +802,6 @@ textarea:focus {
     border: 3px solid var(--color-green);
 }
 
-
 /* Shopping cart */
 .cart {
     display: grid;
@@ -888,7 +886,6 @@ textarea:focus {
 }
 
 /* Cart special offer */
-
 .cart__special-offer {
     align-self: center;
 }
@@ -969,6 +966,8 @@ textarea:focus {
 
 .checkout-cta__guest {
     grid-row: 2;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .checkout-cta__login {
@@ -1109,6 +1108,24 @@ textarea:focus {
     margin: var(--margin-large) auto;
 }
 
+/* Checkout flow - Part 3 - Payment */
+.payment {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--margin-medium);
+    padding: var(--padding-medium);
+    border-top: 1px solid var(--color-black);
+    border-bottom: 1px solid var(--color-black);
+}
+
+.payment-cta {
+    border-top: none;
+    margin: 0;
+}
+
+.review-order {
+    margin-top: var(--margin-medium);
+}
 
 /* Confirmation page */
 .confirmation {
@@ -1557,6 +1574,31 @@ textarea:focus {
         grid-area: prem-door;
     }
 
+    /* Checkout flow - Step 3 - Payment 600px */
+    .payment {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        margin-top: var(--margin-medium);
+        padding: var(--padding-medium);
+        border-top: 1px solid var(--color-black);
+        border-bottom: 1px solid var(--color-black);
+    }
+
+    .review-order {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .choose-payment {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .payment-cta {
+        border-bottom: none;
+
+    }
+
 
 
     /* Confirmation page */
@@ -1895,6 +1937,13 @@ textarea:focus {
     }
 
     .choose-shipping .shipping-form {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Checkout flow - Step 3 - Payment 600px */
+    .payment {
         max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
