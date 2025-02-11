@@ -1,33 +1,55 @@
-This is the course assignment for the HTML and CSS course. The assignment is a continuation of the design course assignment. The goal is to recreate the webpage from Figma with HTML and Figma. 
+# HTML & CSS Course Assignment
 
+## Overview
+This is the **HTML and CSS Course Assignment**, which builds upon the design assignment from the previous course. The objective is to recreate a webpage from Figma using **HTML and CSS**, ensuring a fully functional, accessible, and responsive website.
 
-Brief
-HTML/CSS Course Assignment
- You must deliver a properly functioning, responsive website for the assignment brief you chose in Design 1.
-The site needs to have every page listed in the site architecture on your chosen brief. Certain functionality requiring JavaScript can be mimicked; for example, a login page could link across from the ‘Sign in’ button using the action attribute.
-• The HTML should be semantic and neatly formatted.
-• The CSS should follow the DRY principle and be easy to read.
-• The website should be responsive and look good at every screen size with no
-horizontal scrollbars. Use Flexbox and CSS Grids where appropriate. Please do not use a CSS framework like Bootstrap; we want to see that you can build responsive sites without the help of a framework.
-• The site should be WCAG compliant, and accessibility should be taken into account.
-• Each page should have a unique <meta name="description">, <title>, and <h1>.
-• You should not use copied code in your submission. All code submitted must be
-written by yourself. You may use external sources to show you how to achieve specific effects, which should be included in your report.
-Process
-1. Look at your prototype and consider how you will translate your design into HTML and CSS. Which elements will need to move on small screens? Which techniques will you require?
-2. Write your HTML and CSS, ensuring your HTML is semantic and bug-free and your CSS follows DRY principles.
-3. Use media queries, flex and/or grid to make your website responsive across screen sizes.
-4. Test your website using your developer tools and also test on major browsers and various devices.
-5. Validate your code using the Markup Validation Service
-6. Use the WAVE Web Accessibility Evaluation Tools to test that your site matches best
-practices for accessibility
-7. When your site is ready, post it on the HTML and CSS – Peer feedback section on
-Moodle for peer review.
-8. Look at the work of your peers and write a review for them.
-9. Make adjustments based on the feedback you gather from peers.
-10. Submit on moodle.
-Delivery
-1. Please include a link to your live site, deployed on Netlify or GitHub Pages
-2. Please include a link to your public GitHub repo containing your code
-3. Write a short reflection of your work for this CA.
-4. The marking criteria for the assignment is listed below.
+## Assignment Requirements
+You must deliver a **properly functioning, responsive website** based on your **Design 1** assignment. The website must include every page listed in your site architecture. Some functionalities that require JavaScript can be mimicked using HTML attributes (e.g., a login button can link to a separate login page using the `action` attribute).
+
+### Technical Requirements
+- **HTML**:
+  - Semantic and neatly formatted.
+  - Each page must have a unique `<meta name="description">`, `<title>`, and `<h1>`.
+  - No copied code; all code must be written by yourself.
+- **CSS**:
+  - Follow the **DRY (Don't Repeat Yourself) principle**.
+  - Use **Flexbox and CSS Grid** where appropriate.
+  - Do **not** use a CSS framework (e.g., Bootstrap).
+  - Ensure the site is fully **responsive** with no horizontal scrollbars.
+- **Accessibility**:
+  - The website should comply with **WCAG guidelines**.
+  - Test accessibility using **WAVE Web Accessibility Evaluation Tools**.
+- **Validation**:
+  - Validate HTML using the **Markup Validation Service**.
+  - Validate CSS using browser developer tools.
+
+## Development Process
+1. Analyze your **Figma prototype** and decide how to structure it with **HTML and CSS**.
+2. Write semantic **HTML** and well-organized **CSS**, ensuring it follows best practices.
+3. Implement **responsive design** using **media queries**, **Flexbox**, and/or **CSS Grid**.
+4. Test your website using:
+   - Browser developer tools.
+   - Various screen sizes and major browsers.
+5. Validate your **HTML and CSS** to ensure bug-free code.
+6. Use **WAVE** to check accessibility compliance.
+7. Share your site in the **HTML & CSS Peer Feedback** section on Moodle for review.
+8. Review peer submissions and provide constructive feedback.
+9. Improve your project based on received feedback.
+10. Submit the final version on Moodle.
+
+## Submission Requirements
+- ✅ **Live Site:** Deploy your project on **Netlify** or **GitHub Pages** and provide a link.
+- ✅ **GitHub Repository:** Provide a public GitHub repository link containing your code.
+- ✅ **Reflection:** Write a short reflection on your development process, challenges, and learnings.
+- ✅ **Marking Criteria:** Follow the provided grading rubric for evaluation.
+
+---
+
+### Live Demo
+🔗 **[https://mamf92.github.io/FED1---HTMLCSS-CA/html/mensjackets.html](#)** 
+
+### Repository
+📂 **[https://github.com/mamf92/FED1---HTMLCSS-CA)](#)** 
+
+### Author
+👨‍💻 **Martin Fischer**
