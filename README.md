@@ -49,7 +49,7 @@ You must deliver a **properly functioning, responsive website** based on your **
 🔗 **[https://mamf92.github.io/rainydays-v1/](#)** 
 
 ### Repository
-📂 **[https://github.com/mamf92/rainydays-v1/tree/main](#)** 
+📂 **[https://github.com/mamf92/rainydays-v1](#)** 
 
 ### Author
 👨‍💻 **Martin Fischer**
