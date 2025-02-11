@@ -46,7 +46,7 @@ You must deliver a **properly functioning, responsive website** based on your **
 ---
 
 ### Live Demo
-🔗 **[https://mamf92.github.io/FED1---HTMLCSS-CA/html/mensjackets.html](#)** 
+🔗 **[https://mamf92.github.io/rainydays-v1/](#)** 
 
 ### Repository
 📂 **[https://github.com/mamf92/FED1---HTMLCSS-CA)](#)** 
